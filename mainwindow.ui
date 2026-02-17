@@ -22,7 +22,7 @@
       </property>
       <widget class="QWidget" name="driveToolsTab">
        <attribute name="title">
-        <string>Drive Tools</string>
+        <string>Laufwerk Tools</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <property name="spacing">
@@ -31,13 +31,13 @@
         <item>
          <widget class="QGroupBox" name="filterGroupBox">
           <property name="title">
-           <string>Filters</string>
+           <string>Filter</string>
           </property>
           <layout class="QHBoxLayout" name="filterLayout">
           <item>
            <widget class="QCheckBox" name="diskFilterCheckBox">
             <property name="text">
-             <string>Disk</string>
+             <string>Laufwerk</string>
             </property>
             <property name="checked">
              <bool>false</bool>
@@ -57,7 +57,7 @@
           <item>
            <widget class="QCheckBox" name="minSizeFilterCheckBox">
             <property name="text">
-             <string>Min Size</string>
+             <string>Min. Größe</string>
             </property>
             <property name="checked">
              <bool>true</bool>
@@ -99,7 +99,7 @@
         <item>
          <widget class="QGroupBox" name="drivesGroupBox">
           <property name="title">
-           <string>Available Drives &amp; Partitions</string>
+           <string>Verfügbare Laufwerke &amp; Partitionen</string>
           </property>
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
@@ -152,7 +152,7 @@
              </size>
             </property>
             <property name="text">
-             <string>🔄 Refresh</string>
+             <string>🔄 Aktualisieren</string>
             </property>
            </widget>
           </item>
@@ -178,7 +178,7 @@
              </size>
             </property>
             <property name="text">
-             <string>⚡ Force Mount</string>
+             <string>⚡ Mount erzwingen</string>
             </property>
            </widget>
           </item>
@@ -217,7 +217,7 @@
              </size>
             </property>
             <property name="text">
-             <string>Take Ownership</string>
+             <string>Verantwortung übernehmen</string>
             </property>
            </widget>
           </item>
@@ -230,7 +230,7 @@
              </size>
             </property>
             <property name="text">
-             <string>⏏️ Eject</string>
+             <string>⏏️ Entfernen</string>
             </property>
            </widget>
           </item>
@@ -321,7 +321,7 @@
            <bool>true</bool>
           </property>
           <property name="placeholderText">
-           <string>Command output will appear here...</string>
+           <string>Befehlsausgabe wird hier angezeigt...</string>
           </property>
             </widget>
            </item>
@@ -344,7 +344,7 @@
            </font>
           </property>
           <property name="text">
-           <string>Detected Shell: </string>
+           <string>Entdeckte Shell: </string>
           </property>
          </widget>
         </item>
@@ -366,28 +366,28 @@
           <item>
            <widget class="QPushButton" name="addAliasButton">
             <property name="text">
-             <string>Add Alias</string>
+             <string>Alias ​​hinzufügen</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="editAliasButton">
             <property name="text">
-             <string>Edit Alias</string>
+             <string>Alias bearbeiten</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="removeAliasButton">
             <property name="text">
-             <string>Remove Alias</string>
+             <string>Alias entdernen</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="reloadAliasButton">
             <property name="text">
-             <string>Reload</string>
+             <string>Neu laden</string>
             </property>
            </widget>
           </item>
@@ -397,7 +397,7 @@
       </widget>
       <widget class="QWidget" name="servicesTab">
        <attribute name="title">
-        <string>Services/Startup</string>
+        <string>Dienste/Startup</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_services">
         <item>
@@ -405,14 +405,14 @@
           <item>
            <widget class="QLineEdit" name="serviceSearchBar">
             <property name="placeholderText">
-             <string>Search services...</string>
+             <string>Dienste suchen...</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QCheckBox" name="userServicesToggle">
             <property name="text">
-             <string>Show User Services</string>
+             <string>Nutzerdienste anzeigen</string>
             </property>
            </widget>
           </item>
@@ -443,28 +443,28 @@
           <item>
            <widget class="QPushButton" name="stopServiceButton">
             <property name="text">
-             <string>Stop</string>
+             <string>Stopp</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="restartServiceButton">
             <property name="text">
-             <string>Restart</string>
+             <string>Neustart</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="enableServiceButton">
             <property name="text">
-             <string>Enable</string>
+             <string>Aktivieren</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="disableServiceButton">
             <property name="text">
-             <string>Disable</string>
+             <string>Deaktivieren</string>
             </property>
            </widget>
           </item>
@@ -482,7 +482,7 @@
           <item>
            <widget class="QLabel" name="tweaksTitleLabel">
             <property name="text">
-             <string>System Tweaks and Optimizations</string>
+             <string>System Tweaks und Optimierung</string>
             </property>
            </widget>
           </item>
@@ -502,7 +502,7 @@
           <item>
            <widget class="QPushButton" name="openBackupFolderButton">
             <property name="text">
-             <string>Open Config Backups</string>
+             <string>Konfigurationssicherungen öffnen</string>
             </property>
            </widget>
           </item>
@@ -523,7 +523,7 @@
            </size>
           </property>
           <property name="text">
-           <string>Click "Info" to see detailed instructions, "Apply" to execute the tweak, or "Edit Config" to manually edit configuration files.</string>
+           <string>Klicke auf „Info“, um detaillierte Anweisungen anzuzeigen, auf „Anwenden“, um die Anpassung auszuführen, oder auf „Konfiguration bearbeiten“, um Konfigurationsdateien manuell zu bearbeiten.</string>
           </property>
           <property name="wordWrap">
            <bool>true</bool>
@@ -588,21 +588,21 @@
                <item>
                 <widget class="QPushButton" name="zramApplyButton">
                  <property name="text">
-                  <string>✅ Apply</string>
+                  <string>✅ Anwenden</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="zramBackupButton">
                  <property name="text">
-                  <string>💾 Backup</string>
+                  <string>💾 Sicherung</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="zramConfigButton">
                  <property name="text">
-                  <string>✏️ Edit Config</string>
+                  <string>✏️ Konfiguration bearbeiten</string>
                  </property>
                 </widget>
                </item>
@@ -647,21 +647,21 @@
                <item>
                 <widget class="QPushButton" name="cpuGovernorApplyButton">
                  <property name="text">
-                  <string>✅ Apply</string>
+                  <string>✅ Anwenden</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="cpuGovernorBackupButton">
                  <property name="text">
-                  <string>💾 Backup</string>
+                  <string>💾 Sicherung</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="cpuGovernorConfigButton">
                  <property name="text">
-                  <string>✏️ Edit Config</string>
+                  <string>✏️ Konfiguration bearbeiten</string>
                  </property>
                 </widget>
                </item>
@@ -1194,21 +1194,21 @@
                <item>
                 <widget class="QPushButton" name="dnsApplyButton">
                  <property name="text">
-                  <string>✅ Apply</string>
+                  <string>✅ Apnwenden</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="dnsBackupButton">
                  <property name="text">
-                  <string>💾 Backup</string>
+                  <string>💾 Sicherung</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="dnsConfigButton">
                  <property name="text">
-                  <string>✏️ Edit Config</string>
+                  <string>✏️ Konfiguration bearbeiten</string>
                  </property>
                 </widget>
                </item>
@@ -1218,7 +1218,7 @@
             <item>
              <widget class="QGroupBox" name="tcpOptimizationsGroupBox">
               <property name="title">
-               <string>TCP Optimizations</string>
+               <string>TCP-Optimierungen</string>
               </property>
               <layout class="QHBoxLayout" name="tcpOptimizationsLayout">
                <item>
@@ -1253,21 +1253,21 @@
                <item>
                 <widget class="QPushButton" name="tcpOptimizationsApplyButton">
                  <property name="text">
-                  <string>✅ Apply</string>
+                  <string>✅ Anwenden</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="tcpOptimizationsBackupButton">
                  <property name="text">
-                  <string>💾 Backup</string>
+                  <string>💾 Sicherung</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="tcpOptimizationsConfigButton">
                  <property name="text">
-                  <string>✏️ Edit Config</string>
+                  <string>✏️ Konfiguration bearbeiten</string>
                  </property>
                 </widget>
                </item>
@@ -1291,7 +1291,7 @@
           </widget>
           <widget class="QWidget" name="storageTab">
            <attribute name="title">
-            <string>💾 Storage</string>
+            <string>💾 Speicher</string>
            </attribute>
            <layout class="QVBoxLayout" name="storageLayout">
             <item>
@@ -1332,21 +1332,21 @@
                <item>
                 <widget class="QPushButton" name="trimApplyButton">
                  <property name="text">
-                  <string>✅ Apply</string>
+                  <string>✅ Anwenden</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="trimBackupButton">
                  <property name="text">
-                  <string>💾 Backup</string>
+                  <string>💾 Sicherung</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="trimConfigButton">
                  <property name="text">
-                  <string>✏️ Edit Config</string>
+                  <string>✏️ Konfiguration bearbeiten</string>
                  </property>
                 </widget>
                </item>
@@ -1376,7 +1376,7 @@
             <item>
              <widget class="QGroupBox" name="showHiddenFilesGroupBox">
               <property name="title">
-               <string>Show Hidden Files by Default</string>
+               <string>Versteckte Dateien standardmäßig anzeigen</string>
               </property>
               <layout class="QHBoxLayout" name="showHiddenFilesLayout">
                <item>
@@ -1411,21 +1411,21 @@
                <item>
                 <widget class="QPushButton" name="showHiddenFilesApplyButton">
                  <property name="text">
-                  <string>✅ Apply</string>
+                  <string>✅ Anwenden</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="showHiddenFilesBackupButton">
                  <property name="text">
-                  <string>💾 Backup</string>
+                  <string>💾 Sicherung</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="showHiddenFilesConfigButton">
                  <property name="text">
-                  <string>✏️ Edit Config</string>
+                  <string>✏️ Konfiguration bearbeiten</string>
                  </property>
                 </widget>
                </item>
@@ -1490,21 +1490,21 @@
                <item>
                 <widget class="QPushButton" name="swappinessApplyButton">
                  <property name="text">
-                  <string>✅ Apply</string>
+                  <string>✅ Anwenden</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="swappinessBackupButton">
                  <property name="text">
-                  <string>💾 Backup</string>
+                  <string>💾 Sicherung</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="swappinessConfigButton">
                  <property name="text">
-                  <string>✏️ Edit Config</string>
+                  <string>✏️ Konfiguration bearbeiten</string>
                  </property>
                 </widget>
                </item>
@@ -1556,14 +1556,14 @@
                <item>
                 <widget class="QPushButton" name="ioSchedulerBackupButton">
                  <property name="text">
-                  <string>💾 Backup</string>
+                  <string>💾 Sicherung</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="ioSchedulerConfigButton">
                  <property name="text">
-                  <string>✏️ Edit Config</string>
+                  <string>✏️ Konfiguration bearbeiten</string>
                  </property>
                 </widget>
                </item>
@@ -1608,21 +1608,21 @@
                <item>
                 <widget class="QPushButton" name="thpApplyButton">
                  <property name="text">
-                  <string>✅ Apply</string>
+                  <string>✅ Anwenden</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="thpBackupButton">
                  <property name="text">
-                  <string>💾 Backup</string>
+                  <string>💾 Sicherung</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="thpConfigButton">
                  <property name="text">
-                  <string>✏️ Edit Config</string>
+                  <string>✏️ Konfiguration bearbeiten</string>
                  </property>
                 </widget>
                </item>
@@ -1632,7 +1632,7 @@
             <item>
              <widget class="QGroupBox" name="pacmanOptimizationsGroupBox">
               <property name="title">
-               <string>Pacman Optimizations</string>
+               <string>Pacman-Optimierungen</string>
               </property>
               <layout class="QHBoxLayout" name="pacmanOptimizationsLayout">
                <item>
@@ -1667,21 +1667,21 @@
                <item>
                 <widget class="QPushButton" name="pacmanOptimizationsApplyButton">
                  <property name="text">
-                  <string>✅ Apply</string>
+                  <string>✅ Anwenden</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="pacmanOptimizationsBackupButton">
                  <property name="text">
-                  <string>💾 Backup</string>
+                  <string>💾 Sicherung</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="pacmanOptimizationsConfigButton">
                  <property name="text">
-                  <string>✏️ Edit Config</string>
+                  <string>✏️ Konfiguration bearbeiten</string>
                  </property>
                 </widget>
                </item>
@@ -1691,7 +1691,7 @@
             <item>
              <widget class="QGroupBox" name="journaldGroupBox">
               <property name="title">
-               <string>Journald Settings (Log Size Limit)</string>
+               <string>Journald-Einstellungen (Protokollgrößenbeschränkung)</string>
               </property>
               <layout class="QHBoxLayout" name="journaldLayout">
                <item>
@@ -1726,21 +1726,21 @@
                <item>
                 <widget class="QPushButton" name="journaldApplyButton">
                  <property name="text">
-                  <string>✅ Apply</string>
+                  <string>✅ Anwenden</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="journaldBackupButton">
                  <property name="text">
-                  <string>💾 Backup</string>
+                  <string>💾 Sicherung</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="journaldConfigButton">
                  <property name="text">
-                  <string>✏️ Edit Config</string>
+                  <string>✏️ Konfiguration bearbeiten</string>
                  </property>
                 </widget>
                </item>
@@ -1785,7 +1785,7 @@
           <item>
            <widget class="QLabel" name="kvmTitleLabel">
             <property name="text">
-             <string>KVM Virtual Machine Setup and GPU Passthrough</string>
+             <string>KVM-VM-Einrichtung und GPU-Passthrough</string>
             </property>
            </widget>
           </item>
@@ -1805,7 +1805,7 @@
           <item>
            <widget class="QPushButton" name="openKvmBackupFolderButton">
             <property name="text">
-             <string>Open Config Backups</string>
+             <string>Konfigurationssicherungen öffnen</string>
             </property>
            </widget>
           </item>
@@ -1826,7 +1826,7 @@
            </size>
           </property>
           <property name="text">
-           <string>Click any option to see detailed instructions for KVM setup and GPU passthrough configuration. This approach is safer as it doesn't automatically modify system files.</string>
+           <string>Klicke auf eine beliebige Option, um detaillierte Anweisungen zur KVM-Einrichtung und GPU-Passthrough-Konfiguration anzuzeigen. Diese Methode ist sicherer, da sie keine Systemdateien automatisch verändert.</string>
           </property>
           <property name="wordWrap">
            <bool>true</bool>
@@ -1848,168 +1848,168 @@
           <item row="0" column="0">
            <widget class="QPushButton" name="multiGpuXorgToggle">
             <property name="text">
-             <string>✅ Step 1: Create multi-GPU Xorg config</string>
+             <string>✅ Schritt 1: Multi-GPU-Xorg-Konfiguration erstellen</string>
             </property>
            </widget>
           </item>
           <item row="0" column="1">
            <widget class="QPushButton" name="multiGpuXorgBackupButton">
             <property name="text">
-             <string>Backup</string>
+             <string>Sicherung</string>
             </property>
             <property name="toolTip">
-             <string>Backup Xorg config file</string>
+             <string>Xorg-Konfigurationsdatei sichern</string>
             </property>
            </widget>
           </item>
           <item row="0" column="2">
            <widget class="QPushButton" name="multiGpuXorgConfigButton">
             <property name="text">
-             <string>Edit /etc/X11/xorg.conf.d/10-hybrid.conf</string>
+             <string>Bearbeiten /etc/X11/xorg.conf.d/10-hybrid.conf</string>
             </property>
            </widget>
           </item>
           <item row="1" column="0">
            <widget class="QPushButton" name="grubConfigToggle">
             <property name="text">
-             <string>✅ Step 2: Configure GRUB for IOMMU</string>
+             <string>✅ Schritt 2: GRUB für IOMMU konfigurieren</string>
             </property>
            </widget>
           </item>
           <item row="1" column="1">
            <widget class="QPushButton" name="grubConfigBackupButton">
             <property name="text">
-             <string>Backup</string>
+             <string>Sicherung</string>
             </property>
             <property name="toolTip">
-             <string>Backup GRUB config file</string>
+             <string>GRUB-Konfigurationsdatei sichern</string>
             </property>
            </widget>
           </item>
           <item row="1" column="2">
            <widget class="QPushButton" name="grubConfigButton">
             <property name="text">
-             <string>Edit /etc/default/grub</string>
+             <string>Bearbeiten /etc/default/grub</string>
             </property>
            </widget>
           </item>
           <item row="2" column="0">
            <widget class="QPushButton" name="verifyIommuToggle">
             <property name="text">
-             <string>✅ Step 3: Verify IOMMU and GPU detection</string>
+             <string>✅ Schritt 3: IOMMU- und GPU-Erkennung überprüfen</string>
             </property>
            </widget>
           </item>
           <item row="2" column="1">
            <widget class="QPushButton" name="verifyIommuBackupButton">
             <property name="text">
-             <string>Backup</string>
+             <string>Sicherung</string>
             </property>
             <property name="toolTip">
-             <string>Backup verification results</string>
+             <string>Verifizierungsergebnisse sichern</string>
             </property>
            </widget>
           </item>
           <item row="2" column="2">
            <widget class="QPushButton" name="verifyIommuConfigButton">
             <property name="text">
-             <string>Run verification commands</string>
+             <string>Überprüfungsbefehle ausführen</string>
             </property>
            </widget>
           </item>
           <item row="3" column="0">
            <widget class="QPushButton" name="isolateGpuToggle">
             <property name="text">
-             <string>✈️ Step 4: Isolate GPU from Host Using VFIO</string>
+             <string>✈️ Schritt 4: GPU mithilfe von VFIO vom Host isolieren</string>
             </property>
            </widget>
           </item>
           <item row="3" column="1">
            <widget class="QPushButton" name="isolateGpuBackupButton">
             <property name="text">
-             <string>Backup</string>
+             <string>Sicherung</string>
             </property>
             <property name="toolTip">
-             <string>Backup blacklist config</string>
+             <string>Blacklist-Konfiguration sichern</string>
             </property>
            </widget>
           </item>
           <item row="3" column="2">
            <widget class="QPushButton" name="isolateGpuConfigButton">
             <property name="text">
-             <string>Edit /etc/modprobe.d/blacklist-nvidia.conf</string>
+             <string>Bearbeiten /etc/modprobe.d/blacklist-nvidia.conf</string>
             </property>
            </widget>
           </item>
           <item row="4" column="0">
            <widget class="QPushButton" name="bindGpuToggle">
             <property name="text">
-             <string>✈️ Step 5: Bind GPU to VFIO</string>
+             <string>✈️ Schritt 5: GPU an VFIO binden</string>
             </property>
            </widget>
           </item>
           <item row="4" column="1">
            <widget class="QPushButton" name="bindGpuBackupButton">
             <property name="text">
-             <string>Backup</string>
+             <string>Sicherung</string>
             </property>
             <property name="toolTip">
-             <string>Backup VFIO config</string>
+             <string>VFIO-Konfiguration sichern</string>
             </property>
            </widget>
           </item>
           <item row="4" column="2">
            <widget class="QPushButton" name="bindGpuConfigButton">
             <property name="text">
-             <string>Edit /etc/modprobe.d/vfio.conf</string>
+             <string>Bearbeiten /etc/modprobe.d/vfio.conf</string>
             </property>
            </widget>
           </item>
           <item row="5" column="0">
            <widget class="QPushButton" name="loadVfioToggle">
             <property name="text">
-             <string>✈️ Step 6: Ensure VFIO modules load early</string>
+             <string>✈️ Schritt 6: Sicherstellen, dass die VFIO-Module frühzeitig geladen werden.</string>
             </property>
            </widget>
           </item>
           <item row="5" column="1">
            <widget class="QPushButton" name="loadVfioBackupButton">
             <property name="text">
-             <string>Backup</string>
+             <string>Sicherung</string>
             </property>
             <property name="toolTip">
-             <string>Backup modules config</string>
+             <string>Konfiguration der Sicherungsmodule</string>
             </property>
            </widget>
           </item>
           <item row="5" column="2">
            <widget class="QPushButton" name="loadVfioConfigButton">
             <property name="text">
-             <string>Edit /etc/modules-load.d/vfio.conf</string>
+             <string>Bearbeiten /etc/modules-load.d/vfio.conf</string>
             </property>
            </widget>
           </item>
           <item row="6" column="0">
            <widget class="QPushButton" name="hugePagesToggle">
             <property name="text">
-             <string>💾 Step 7: Configure Huge Pages</string>
+             <string>💾 Schritt 7: Konfiguration von großen Seiten</string>
             </property>
            </widget>
           </item>
           <item row="6" column="1">
            <widget class="QPushButton" name="hugePagesBackupButton">
             <property name="text">
-             <string>Backup</string>
+             <string>Sicherung</string>
             </property>
             <property name="toolTip">
-             <string>Backup huge pages config</string>
+             <string>Konfiguration für die Sicherung großer Seiten</string>
             </property>
            </widget>
           </item>
           <item row="6" column="2">
            <widget class="QPushButton" name="hugePagesConfigButton">
             <property name="text">
-             <string>Configure Huge Pages</string>
+             <string>Konfiguration großer Seiten</string>
             </property>
            </widget>
           </item>
@@ -2099,7 +2099,7 @@
       </widget>
       <widget class="QWidget" name="logsTab">
        <attribute name="title">
-        <string>System Logs</string>
+        <string>Systemprotokolle</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_logs">
         <item>
@@ -2107,7 +2107,7 @@
           <item>
            <widget class="QLabel" name="logFileLabel">
             <property name="text">
-             <string>Log File:</string>
+             <string>Protokolldatei:</string>
             </property>
            </widget>
           </item>
@@ -2117,14 +2117,14 @@
           <item>
            <widget class="QPushButton" name="refreshLogsButton">
             <property name="text">
-             <string>🔄 Refresh</string>
+             <string>🔄 Aktualisieren</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="clearLogButton">
             <property name="text">
-             <string>🗑️ Clear Log</string>
+             <string>🗑️ Protokoll löschen</string>
             </property>
            </widget>
           </item>
@@ -2142,21 +2142,21 @@
           <item>
            <widget class="QLineEdit" name="logFilterEdit">
             <property name="placeholderText">
-             <string>Search in log content...</string>
+             <string>Suche im Protokollinhalt...</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QLabel" name="linesLabel">
             <property name="text">
-             <string>Lines:</string>
+             <string>Linien:</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QSpinBox" name="logLinesSpinBox">
             <property name="suffix">
-             <string> lines</string>
+             <string> Linien</string>
             </property>
             <property name="minimum">
              <number>10</number>
@@ -2172,7 +2172,7 @@
           <item>
            <widget class="QCheckBox" name="tailLogCheckBox">
             <property name="text">
-             <string>Follow (tail)</string>
+             <string>Folge (tail)</string>
             </property>
             <property name="checked">
              <bool>false</bool>
@@ -2182,7 +2182,7 @@
           <item>
            <widget class="QPushButton" name="applyFilterButton">
             <property name="text">
-             <string>Apply</string>
+             <string>Anwenden</string>
             </property>
            </widget>
           </item>
@@ -2200,7 +2200,7 @@
            <bool>true</bool>
           </property>
           <property name="placeholderText">
-           <string>Log content will appear here...</string>
+           <string>Protokollinhalt wird hier angezeigt....</string>
           </property>
          </widget>
         </item>
@@ -2209,7 +2209,7 @@
           <item>
            <widget class="QLabel" name="logStatusLabel">
             <property name="text">
-             <string>Ready</string>
+             <string>Bereit</string>
             </property>
            </widget>
           </item>
@@ -2229,14 +2229,14 @@
           <item>
            <widget class="QPushButton" name="copyLogButton">
             <property name="text">
-             <string>📋 Copy</string>
+             <string>📋 Kopieren</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="saveLogButton">
             <property name="text">
-             <string>💾 Save</string>
+             <string>💾 Speichern</string>
             </property>
            </widget>
           </item>
@@ -2246,7 +2246,7 @@
       </widget>
       <widget class="QWidget" name="backupTab">
        <attribute name="title">
-        <string>Backup</string>
+        <string>Sicherung</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_backup">
         <item>
@@ -2259,14 +2259,14 @@
             <item>
              <widget class="QLabel" name="sourceLabel">
               <property name="text">
-               <string>System Backup Source:</string>
+               <string>System-Sicherungs-Quelle:</string>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="sourcePathLabel">
               <property name="text">
-               <string>Source Path:</string>
+               <string>Quellpfad:</string>
               </property>
              </widget>
             </item>
@@ -2280,7 +2280,7 @@
             <item>
              <widget class="QLabel" name="destLabel">
               <property name="text">
-               <string>Destination Drive:</string>
+               <string>Ziellaufwerk:</string>
               </property>
              </widget>
             </item>
@@ -2306,14 +2306,14 @@
           <item>
            <widget class="QLabel" name="backupSummaryLabel">
             <property name="text">
-             <string>Select source and destination to begin backup.</string>
+             <string>Quelle und Ziel auswählen, um die Datensicherung zu starten.</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="startBackupButton">
             <property name="text">
-             <string>Start Backup</string>
+             <string>Sicherung starten</string>
             </property>
            </widget>
           </item>
@@ -2338,7 +2338,7 @@
         <item>
          <widget class="QLabel" name="backupPathSummaryLabel">
           <property name="text">
-           <string>Source: -\nDestination: -</string>
+           <string>Quelle: -\nZiel: -</string>
           </property>
          </widget>
         </item>
@@ -2346,7 +2346,7 @@
       </widget>
       <widget class="QWidget" name="restoreTab">
        <attribute name="title">
-        <string>Restore</string>
+        <string>Wiederherstellen</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_restore">
         <item>
@@ -2359,7 +2359,7 @@
             <item>
              <widget class="QLabel" name="restoreSourceLabel">
               <property name="text">
-               <string>Backup Source:</string>
+               <string>Sicherungsquelle:</string>
               </property>
              </widget>
             </item>
@@ -2369,7 +2369,7 @@
             <item>
              <widget class="QLabel" name="restoreSourcePathLabel">
               <property name="text">
-               <string>Backup Path:</string>
+               <string>Sicherungspfad:</string>
               </property>
              </widget>
             </item>
@@ -2383,7 +2383,7 @@
             <item>
              <widget class="QLabel" name="restoreDestLabel">
               <property name="text">
-               <string>Restore Destination:</string>
+               <string>Ziel wiederherstellen:</string>
               </property>
              </widget>
             </item>
@@ -2393,7 +2393,7 @@
             <item>
              <widget class="QLabel" name="restoreDestPathLabel">
               <property name="text">
-               <string>Destination Path:</string>
+               <string>Zielpfad:</string>
               </property>
              </widget>
             </item>
@@ -2409,14 +2409,14 @@
           <item>
            <widget class="QLabel" name="restoreSummaryLabel">
             <property name="text">
-             <string>Select backup source and restore destination.</string>
+             <string>Sicherungsquelle und Wiederherstellungsziel auswählen.</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="startRestoreButton">
             <property name="text">
-             <string>Start Restore</string>
+             <string>Wiederherstellung starten</string>
             </property>
            </widget>
           </item>
@@ -2441,7 +2441,7 @@
         <item>
          <widget class="QLabel" name="restorePathSummaryLabel">
           <property name="text">
-           <string>Source: -\nDestination: -</string>
+           <string>Quelle: -\nZiel: -</string>
           </property>
          </widget>
         </item>
@@ -2471,13 +2471,13 @@
             <item>
              <widget class="QGroupBox" name="isoModeGroup">
               <property name="title">
-               <string>Download Mode</string>
+               <string>Download-Modus</string>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_mode">
                <item>
                 <widget class="QRadioButton" name="onlineModeRadio">
                  <property name="text">
-                  <string>Online Mode: Download Required Installation Packages from AUR (4.0GB Download)</string>
+                  <string>Online-Modus: Lade die erforderlichen Installationspakete aus dem AUR herunter. (4.0GB Download)</string>
                  </property>
                  <property name="checked">
                   <bool>true</bool>
@@ -2487,14 +2487,14 @@
                <item>
                 <widget class="QRadioButton" name="offlineModeRadio">
                  <property name="text">
-                  <string>Offline Mode: (DO NOT USE... NEEDS TO BE FIXED) Use existing offline-iso-packages.tar.gz previously downloaded (Must be in the root folder of this program)</string>
+                  <string>Offline-Modus: (NICHT VERWENDEN... MUSS BEHOBEN WERDEN) Verwende die bereits heruntergeladene Datei offline-iso-packages.tar.gz (muss sich im Stammverzeichnis dieses Programms befinden).</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QLabel" name="offlineStatusLabel">
                  <property name="text">
-                  <string>Checking offline package availability...</string>
+                  <string>Offline-Paketverfügbarkeit prüfen...</string>
                  </property>
                  <property name="styleSheet">
                   <string notr="true">color: #666666;</string>
@@ -2506,7 +2506,7 @@
                  <item>
                   <widget class="QPushButton" name="downloadOfflineButton">
                    <property name="text">
-                    <string>📥 Download Offline Package (3.8GB)</string>
+                    <string>📥 Offline-Paket herunterladen (3.8GB)</string>
                    </property>
                    <property name="visible">
                     <bool>false</bool>
@@ -2516,7 +2516,7 @@
                  <item>
                   <widget class="QPushButton" name="checkAvailabilityButton">
                    <property name="text">
-                    <string>🔄 Check Availability</string>
+                    <string>🔄 Verfügbarkeit prüfen</string>
                    </property>
                   </widget>
                  </item>
@@ -2534,7 +2534,7 @@
                <item>
                 <widget class="QLabel" name="isoInfoLabel">
                  <property name="text">
-                  <string>This tool creates a bootable ISO that contains an EXACT clone of your current system. The ISO will include:</string>
+                  <string>Dieses Tool erstellt eine bootfähige ISO-Datei, die eine exakte Kopie deines aktuellen Systems enthält. Die ISO-Datei umfasst Folgendes:</string>
                  </property>
                  <property name="wordWrap">
                   <bool>true</bool>
@@ -2544,27 +2544,34 @@
                <item>
                 <widget class="QTextEdit" name="isoInfoText">
                  <property name="plainText">
-                  <string>• Instructions after the ISO is ready:
-• Burn the ISO with BalenaEtcher
-• Boot into the live environment with our ISO
-• Type: sudo install.sh
-• DONE ! From here, just follow the instructions on the screen.
-• **** After the installation is done, if grub is unable to boot into the OS, try all other grub entries, one of them should work!                  
-• **** THIS ISO WILL KEEP ALL OF YOUR PERSONAL DATA AND GOOGLE LOGINS, DISCORD LOGINS, ETC. 
-• **** IF YOU WANT TO MAKE A ISO FOR YOUR FRIENDS, MAKE SURE YOU REMOVE ALL OF YOUR PERSONAL DATA AND GOOGLE LOGINS, DISCORD LOGINS, ETC.
+                  <string>• Anleitung nach Fertigstellung der ISO-Datei:
 
-• Complete system snapshot (all files, configurations, installed packages)
-• Bootable live environment with installer
-• Automatic system restoration tool
-• UEFI/GPT partitioning support
-• NetworkManager and essential tools
-• Your exact system state as of creation time
+• Brenne die ISO-Datei mit BalenaEtcher.
 
-The resulting ISO can be used to:
-• Boot into a live environment
-• Install an exact copy of your system to any compatible hardware
-• Restore your system to any point in time
-• Create backup installations</string>
+• Starte die Live-Umgebung mit unserer ISO-Datei.
+
+• Gebe Folgendes ein: sudo install.sh
+
+• Fertig! Folge nun einfach den Anweisungen auf dem Bildschirm.
+
+• **** Falls GRUB nach der Installation nicht in das Betriebssystem bootet, versuchen Sie alle anderen GRUB-Einträge. Einer davon sollte funktionieren!
+
+• **** DIESE ISO-Datei BEHALTET ALLE IHRE PERSÖNLICHEN DATEN UND GOOGLE-ANMELDUNGEN, DISCORD-ANMELDUNGEN USW.
+
+• **** WENN SIE EINE ISO-Datei FÜR IHRE FREUNDE ERSTELLEN MÖCHTEN, STELLEN SIE SICHER, DASS SIE ALLE IHRE PERSÖNLICHEN DATEN UND GOOGLE-ANMELDUNGEN, DISCORD-ANMELDUNGEN USW. ENTFERNEN.
+
+• Vollständiger System-Snapshot (alle Dateien, Konfigurationen, installierte Pakete)
+• Bootfähige Live-Umgebung mit Installationsprogramm
+• Automatisches Systemwiederherstellungstool
+• Unterstützung für UEFI/GPT-Partitionierung
+• NetworkManager und wichtige Tools
+• Ihr exakter Systemzustand zum Zeitpunkt der Erstellung
+
+Die resultierende ISO-Datei kann verwendet werden, um:
+• in eine Live-Umgebung zu booten
+• eine exakte Kopie Ihres Systems auf beliebiger kompatibler Hardware zu installieren
+• Ihr System auf einen beliebigen Zeitpunkt wiederherzustellen
+• Sicherung-Installationen zu erstellen</string>
                  </property>
                  <property name="readOnly">
                   <bool>true</bool>
@@ -2597,7 +2604,7 @@ The resulting ISO can be used to:
             <item>
              <widget class="QTextEdit" name="isoStatusLabel">
               <property name="plainText">
-               <string>Ready to create system clone ISO. Output will be saved to /home/user/iso/xiso/output/</string>
+               <string>Bereit zum Systemklon-ISO-Datei erstellen. Ausgabe wird unter /home/user/iso/xiso/output/ gespeichert.</string>
               </property>
               <property name="readOnly">
                <bool>true</bool>
@@ -2647,7 +2654,7 @@ The resulting ISO can be used to:
                  </font>
                 </property>
                 <property name="text">
-                 <string>🚀 Create System Clone ISO</string>
+                 <string>🚀 Systemklon-ISO erstellen</string>
                 </property>
                </widget>
               </item>
@@ -2666,10 +2673,10 @@ The resulting ISO can be used to:
                  </font>
                 </property>
                 <property name="text">
-                 <string>📁 Browse</string>
+                 <string>📁 Durchsuchen</string>
                 </property>
                 <property name="toolTip">
-                 <string>Browse to ISO output folder using Dolphin</string>
+                 <string>Mit Dolphin zum ISO-Ausgabeordner navigieren</string>
                 </property>
                </widget>
               </item>
@@ -2697,7 +2704,7 @@ The resulting ISO can be used to:
       </widget>
       <widget class="QWidget" name="networkTab">
        <attribute name="title">
-        <string>Network</string>
+        <string>Netzwerk</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_network">
         <item>
@@ -2707,13 +2714,13 @@ The resulting ISO can be used to:
           </property>
           <widget class="QWidget" name="networkInfoTab">
            <attribute name="title">
-            <string>Network Information</string>
+            <string>Netzwerkinfo</string>
            </attribute>
            <layout class="QVBoxLayout" name="verticalLayout_networkInfo">
             <item>
              <widget class="QGroupBox" name="ipInfoGroupBox">
               <property name="title">
-               <string>IP Addresses</string>
+               <string>IP-Adressen</string>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_ipInfo">
                <item>
@@ -2729,17 +2736,17 @@ The resulting ISO can be used to:
                  </property>
                  <column>
                   <property name="text">
-                   <string>Interface</string>
+                   <string>Schnittstelle</string>
                   </property>
                  </column>
                  <column>
                   <property name="text">
-                   <string>IP Address</string>
+                   <string>IP-Addresse</string>
                   </property>
                  </column>
                  <column>
                   <property name="text">
-                   <string>Netmask</string>
+                   <string>Netzmaske</string>
                   </property>
                  </column>
                  <column>
@@ -2767,7 +2774,7 @@ The resulting ISO can be used to:
                  <item>
                   <widget class="QPushButton" name="refreshIpButton">
                    <property name="text">
-                    <string>🔄 Refresh</string>
+                    <string>🔄 Aktualisieren</string>
                    </property>
                   </widget>
                  </item>
@@ -2779,34 +2786,34 @@ The resulting ISO can be used to:
             <item>
              <widget class="QGroupBox" name="networkStatsGroupBox">
               <property name="title">
-               <string>Network Statistics</string>
+               <string>Netzwerkstatistiken</string>
               </property>
               <layout class="QGridLayout" name="gridLayout_networkStats">
                <item row="0" column="0">
                 <widget class="QLabel" name="localIpLabel">
                  <property name="text">
-                  <string>Local IP:</string>
+                  <string>Lokale IP:</string>
                  </property>
                 </widget>
                </item>
                <item row="0" column="1">
                 <widget class="QLabel" name="localIpValueLabel">
                  <property name="text">
-                  <string>Loading...</string>
+                  <string>Laden...</string>
                  </property>
                 </widget>
                </item>
                <item row="1" column="0">
                 <widget class="QLabel" name="publicIpLabel">
                  <property name="text">
-                  <string>Public IP:</string>
+                  <string>Öffentliche IP:</string>
                  </property>
                 </widget>
                </item>
                <item row="1" column="1">
                 <widget class="QLabel" name="publicIpValueLabel">
                  <property name="text">
-                  <string>Loading...</string>
+                  <string>Laden...</string>
                  </property>
                 </widget>
                </item>
@@ -2820,21 +2827,21 @@ The resulting ISO can be used to:
                <item row="2" column="1">
                 <widget class="QLabel" name="hostnameValueLabel">
                  <property name="text">
-                  <string>Loading...</string>
+                  <string>Laden...</string>
                  </property>
                 </widget>
                </item>
                <item row="3" column="0">
                 <widget class="QLabel" name="dnsLabel">
                  <property name="text">
-                  <string>DNS Servers:</string>
+                  <string>DNS-Server:</string>
                  </property>
                 </widget>
                </item>
                <item row="3" column="1">
                 <widget class="QLabel" name="dnsValueLabel">
                  <property name="text">
-                  <string>Loading...</string>
+                  <string>Laden...</string>
                  </property>
                 </widget>
                </item>
@@ -2844,7 +2851,7 @@ The resulting ISO can be used to:
             <item>
              <widget class="QGroupBox" name="detailedStatsGroupBox">
               <property name="title">
-               <string>Detailed Interface Statistics</string>
+               <string>Detaillierte Schnittstellenstatistiken</string>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_detailedStats">
                <item>
@@ -2860,42 +2867,42 @@ The resulting ISO can be used to:
                  </property>
                  <column>
                   <property name="text">
-                   <string>Interface</string>
+                   <string>Schnittstellen</string>
                   </property>
                  </column>
                  <column>
                   <property name="text">
-                   <string>RX Bytes</string>
+                   <string>RX-Bytes</string>
                   </property>
                  </column>
                  <column>
                   <property name="text">
-                   <string>TX Bytes</string>
+                   <string>TX-Bytes</string>
                   </property>
                  </column>
                  <column>
                   <property name="text">
-                   <string>RX Packets</string>
+                   <string>RX-Packete</string>
                   </property>
                  </column>
                  <column>
                   <property name="text">
-                   <string>TX Packets</string>
+                   <string>TX-Pakete</string>
                   </property>
                  </column>
                  <column>
                   <property name="text">
-                   <string>RX Errors</string>
+                   <string>RX-Fehler</string>
                   </property>
                  </column>
                  <column>
                   <property name="text">
-                   <string>TX Errors</string>
+                   <string>TX-Fehler</string>
                   </property>
                  </column>
                  <column>
                   <property name="text">
-                   <string>Speed</string>
+                   <string>Geschwindigkeit</string>
                   </property>
                  </column>
                 </widget>
@@ -2907,7 +2914,7 @@ The resulting ISO can be used to:
           </widget>
           <widget class="QWidget" name="interfaceConfigTab">
            <attribute name="title">
-            <string>Interface Configuration</string>
+            <string>Schnittstellenkonfiguration</string>
            </attribute>
            <layout class="QVBoxLayout" name="verticalLayout_interfaceConfig">
             <item>
@@ -2923,17 +2930,17 @@ The resulting ISO can be used to:
               </property>
               <column>
                <property name="text">
-                <string>Interface</string>
+                <string>Schnittstelle</string>
                </property>
               </column>
               <column>
                <property name="text">
-                <string>Configuration</string>
+                <string>Konfiguration</string>
                </property>
               </column>
               <column>
                <property name="text">
-                <string>IP Address</string>
+                <string>IP-Addresse</string>
                </property>
               </column>
               <column>
@@ -2953,28 +2960,28 @@ The resulting ISO can be used to:
               <item>
                <widget class="QPushButton" name="configureInterfaceButton">
                 <property name="text">
-                 <string>⚙️ Configure Interface</string>
+                 <string>⚙️ Schnittstelle konfigurieren</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QPushButton" name="upInterfaceButton">
                 <property name="text">
-                 <string>⬆️ Bring Up</string>
+                 <string>⬆️ Rauf holen</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QPushButton" name="downInterfaceButton">
                 <property name="text">
-                 <string>⬇️ Bring Down</string>
+                 <string>⬇️ Runter holen</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QPushButton" name="refreshInterfaceConfigButton">
                 <property name="text">
-                 <string>🔄 Refresh</string>
+                 <string>🔄 Aktualisieren</string>
                 </property>
                </widget>
               </item>
@@ -2997,7 +3004,7 @@ The resulting ISO can be used to:
           </widget>
           <widget class="QWidget" name="bridgeTab">
            <attribute name="title">
-            <string>Bridge Configuration</string>
+            <string>Bridge Konfiguration</string>
            </attribute>
            <layout class="QVBoxLayout" name="verticalLayout_bridge">
             <item>
@@ -3018,7 +3025,7 @@ The resulting ISO can be used to:
               </column>
               <column>
                <property name="text">
-                <string>Interfaces</string>
+                <string>Schnittstellen</string>
                </property>
               </column>
               <column>
@@ -3033,21 +3040,21 @@ The resulting ISO can be used to:
               <item>
                <widget class="QPushButton" name="createBridgeButton">
                 <property name="text">
-                 <string>➕ Create Bridge</string>
+                 <string>➕ Bridge erstellen</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QPushButton" name="deleteBridgeButton">
                 <property name="text">
-                 <string>🗑️ Delete Bridge</string>
+                 <string>🗑️ Bridge löschen</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QPushButton" name="refreshBridgeButton">
                 <property name="text">
-                 <string>🔄 Refresh</string>
+                 <string>🔄 Aktualisieren</string>
                 </property>
                </widget>
               </item>
@@ -3070,7 +3077,7 @@ The resulting ISO can be used to:
           </widget>
           <widget class="QWidget" name="libvirtTab">
            <attribute name="title">
-            <string>Libvirt Networks</string>
+            <string>Libvirt-Netzwerke</string>
            </attribute>
            <layout class="QVBoxLayout" name="verticalLayout_libvirt">
             <item>
@@ -3086,17 +3093,17 @@ The resulting ISO can be used to:
               </property>
               <column>
                <property name="text">
-                <string>Network Name</string>
+                <string>Netzwerkname</string>
                </property>
               </column>
               <column>
                <property name="text">
-                <string>Type</string>
+                <string>Typ</string>
                </property>
               </column>
               <column>
                <property name="text">
-                <string>State</string>
+                <string>Status</string>
                </property>
               </column>
               <column>
@@ -3118,21 +3125,21 @@ The resulting ISO can be used to:
               <item>
                <widget class="QPushButton" name="stopLibvirtNetworkButton">
                 <property name="text">
-                 <string>⏸️ Stop</string>
+                 <string>⏸️ Stopp</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QPushButton" name="restartLibvirtNetworkButton">
                 <property name="text">
-                 <string>🔄 Restart</string>
+                 <string>🔄 Neustart</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QPushButton" name="refreshLibvirtNetworkButton">
                 <property name="text">
-                 <string>🔄 Refresh</string>
+                 <string>🔄 Aktualisieren</string>
                 </property>
                </widget>
               </item>
@@ -3159,7 +3166,7 @@ The resulting ISO can be used to:
       </widget>
       <widget class="QWidget" name="packageManagerTab">
        <attribute name="title">
-        <string>Package Manager</string>
+        <string>Paketmanager</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_package">
         <item>
@@ -3167,17 +3174,17 @@ The resulting ISO can be used to:
           <item>
            <widget class="QPushButton" name="clearCacheButton">
             <property name="text">
-             <string>🗑️ Clear Pacman Cache</string>
+             <string>🗑️ Pacman Cache bereinigen</string>
             </property>
             <property name="toolTip">
-             <string>Clear pacman package cache</string>
+             <string>Pacman-Paketcache bereinigen</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="refreshPackagesButton">
             <property name="text">
-             <string>🔄 Refresh All</string>
+             <string>🔄 Alle aktualisieren</string>
             </property>
            </widget>
           </item>
@@ -3197,21 +3204,21 @@ The resulting ISO can be used to:
           <item>
            <widget class="QLabel" name="yayStatusLabel">
             <property name="text">
-             <string>Yay: Not Installed</string>
+             <string>Yay: Nicht installiert</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="yayInstallButton">
             <property name="text">
-             <string>Install Yay</string>
+             <string>Yay installieren</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="yayReinstallButton">
             <property name="text">
-             <string>Reinstall Yay</string>
+             <string>Yay neu installieren</string>
             </property>
             <property name="visible">
              <bool>false</bool>
@@ -3221,7 +3228,7 @@ The resulting ISO can be used to:
           <item>
            <widget class="QPushButton" name="yayUninstallButton">
             <property name="text">
-             <string>Uninstall Yay</string>
+             <string>Yay deinstallieren</string>
             </property>
             <property name="visible">
              <bool>false</bool>
@@ -3231,21 +3238,21 @@ The resulting ISO can be used to:
           <item>
            <widget class="QLabel" name="paruStatusLabel">
             <property name="text">
-             <string>Paru: Not Installed</string>
+             <string>Paru: Nicht installiert</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="paruInstallButton">
             <property name="text">
-             <string>Install Paru</string>
+             <string>Paru installieren</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="paruReinstallButton">
             <property name="text">
-             <string>Reinstall Paru</string>
+             <string>Paru neu installieren</string>
             </property>
             <property name="visible">
              <bool>false</bool>
@@ -3255,7 +3262,7 @@ The resulting ISO can be used to:
           <item>
            <widget class="QPushButton" name="paruUninstallButton">
             <property name="text">
-             <string>Uninstall Paru</string>
+             <string>Paru deinstallieren</string>
             </property>
             <property name="visible">
              <bool>false</bool>
@@ -3275,7 +3282,7 @@ The resulting ISO can be used to:
              <widget class="QTabWidget" name="pacmanTabWidget">
               <widget class="QWidget" name="pacmanInstalledTab">
                <attribute name="title">
-                <string>Installed Packages</string>
+                <string>Installierte Pakete</string>
                </attribute>
                <layout class="QVBoxLayout" name="verticalLayout_pacman_installed">
                 <item>
@@ -3283,14 +3290,14 @@ The resulting ISO can be used to:
                   <item>
                    <widget class="QLineEdit" name="pacmanInstalledSearch">
                     <property name="placeholderText">
-                     <string>Search installed packages...</string>
+                     <string>Installierte Pakete durchsuchen...</string>
                     </property>
                    </widget>
                   </item>
                   <item>
                    <widget class="QPushButton" name="pacmanRefreshInstalledButton">
                     <property name="text">
-                     <string>🔄 Refresh</string>
+                     <string>🔄 Aktualisieren</string>
                     </property>
                    </widget>
                   </item>
@@ -3314,14 +3321,14 @@ The resulting ISO can be used to:
                   <item>
                    <widget class="QPushButton" name="pacmanUninstallButton">
                     <property name="text">
-                     <string>Uninstall Selected</string>
+                     <string>Ausgewählte deinstallieren</string>
                     </property>
                    </widget>
                   </item>
                   <item>
                    <widget class="QPushButton" name="pacmanReinstallButton">
                     <property name="text">
-                     <string>Reinstall Selected</string>
+                     <string>Ausgewählte neu installieren</string>
                     </property>
                    </widget>
                   </item>
@@ -3344,7 +3351,7 @@ The resulting ISO can be used to:
               </widget>
               <widget class="QWidget" name="pacmanAurTab">
                <attribute name="title">
-                <string>AUR Search</string>
+                <string>AUR suchen</string>
                </attribute>
                <layout class="QVBoxLayout" name="verticalLayout_pacman_aur">
                 <item>
@@ -3352,28 +3359,28 @@ The resulting ISO can be used to:
                   <item>
                    <widget class="QLineEdit" name="pacmanAurSearch">
                     <property name="placeholderText">
-                     <string>Search AUR packages...</string>
+                     <string>AUR-Pakete durchsuchen...</string>
                     </property>
                    </widget>
                   </item>
                   <item>
                    <widget class="QComboBox" name="pacmanAurSearchMode">
                     <property name="toolTip">
-                     <string>Search mode</string>
+                     <string>Suchmodus</string>
                     </property>
                     <item>
                      <property name="text">
-                      <string>Package Name</string>
+                      <string>Paketname</string>
                      </property>
                     </item>
                     <item>
                      <property name="text">
-                      <string>Description</string>
+                      <string>Beschreibung</string>
                      </property>
                     </item>
                     <item>
                      <property name="text">
-                      <string>Both (Name or Desc)</string>
+                      <string>Beides (Name oder Beschreibung)</string>
                      </property>
                     </item>
                    </widget>
@@ -3381,16 +3388,16 @@ The resulting ISO can be used to:
                   <item>
                    <widget class="QComboBox" name="pacmanAurSearchType">
                     <property name="toolTip">
-                     <string>Search type</string>
+                     <string>Suchtyp</string>
                     </property>
                     <item>
                      <property name="text">
-                      <string>Exact</string>
+                      <string>Genau</string>
                      </property>
                     </item>
                     <item>
                      <property name="text">
-                      <string>Contains</string>
+                      <string>Enthalten</string>
                      </property>
                     </item>
                    </widget>
@@ -3398,7 +3405,7 @@ The resulting ISO can be used to:
                   <item>
                    <widget class="QPushButton" name="pacmanAurSearchButton">
                     <property name="text">
-                     <string>🔍 Search</string>
+                     <string>🔍 Suche</string>
                     </property>
                    </widget>
                   </item>
@@ -3422,7 +3429,7 @@ The resulting ISO can be used to:
                   <item>
                    <widget class="QPushButton" name="pacmanAurInstallButton">
                     <property name="text">
-                     <string>Install Selected</string>
+                     <string>Ausgewählte installieren</string>
                     </property>
                    </widget>
                   </item>
@@ -3457,28 +3464,28 @@ The resulting ISO can be used to:
               <item>
                <widget class="QLineEdit" name="yaySearch">
                 <property name="placeholderText">
-                 <string>Search packages...</string>
+                 <string>Pakete suchen...</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QComboBox" name="yaySearchMode">
                 <property name="toolTip">
-                 <string>Search mode</string>
+                 <string>Suchmodus</string>
                 </property>
                 <item>
                  <property name="text">
-                  <string>Package Name</string>
+                  <string>Paketname</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string>Description</string>
+                  <string>Beschreibung</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string>Both (Name or Desc)</string>
+                  <string>Beides (Name oder Beschreibung)</string>
                  </property>
                 </item>
                </widget>
@@ -3486,16 +3493,16 @@ The resulting ISO can be used to:
               <item>
                <widget class="QComboBox" name="yaySearchType">
                 <property name="toolTip">
-                 <string>Search type</string>
+                 <string>Suchtyp</string>
                 </property>
                 <item>
                  <property name="text">
-                  <string>Exact</string>
+                  <string>Genau</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string>Contains</string>
+                  <string>Enthalten</string>
                  </property>
                 </item>
                </widget>
@@ -3503,7 +3510,7 @@ The resulting ISO can be used to:
               <item>
                <widget class="QPushButton" name="yaySearchButton">
                 <property name="text">
-                 <string>🔍 Search</string>
+                 <string>🔍 Suche</string>
                 </property>
                </widget>
               </item>
@@ -3527,14 +3534,14 @@ The resulting ISO can be used to:
               <item>
                <widget class="QPushButton" name="yayInstallPackageButton">
                 <property name="text">
-                 <string>Install Selected</string>
+                 <string>Ausgewählte installieren</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QPushButton" name="yayUninstallPackageButton">
                 <property name="text">
-                 <string>Uninstall Selected</string>
+                 <string>Ausgewählte deinstallieren</string>
                 </property>
                </widget>
               </item>
@@ -3565,28 +3572,28 @@ The resulting ISO can be used to:
               <item>
                <widget class="QLineEdit" name="paruSearch">
                 <property name="placeholderText">
-                 <string>Search packages...</string>
+                 <string>Pakete suchen...</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QComboBox" name="paruSearchMode">
                 <property name="toolTip">
-                 <string>Search mode</string>
+                 <string>Suchmodus</string>
                 </property>
                 <item>
                  <property name="text">
-                  <string>Package Name</string>
+                  <string>Paketname</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string>Description</string>
+                  <string>Beschreibung</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string>Both (Name or Desc)</string>
+                  <string>Beides (Name oder Beschreibung)</string>
                  </property>
                 </item>
                </widget>
@@ -3594,16 +3601,16 @@ The resulting ISO can be used to:
               <item>
                <widget class="QComboBox" name="paruSearchType">
                 <property name="toolTip">
-                 <string>Search type</string>
+                 <string>Suchtyp</string>
                 </property>
                 <item>
                  <property name="text">
-                  <string>Exact</string>
+                  <string>Genau</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string>Contains</string>
+                  <string>Enthalten</string>
                  </property>
                 </item>
                </widget>
@@ -3611,7 +3618,7 @@ The resulting ISO can be used to:
               <item>
                <widget class="QPushButton" name="paruSearchButton">
                 <property name="text">
-                 <string>🔍 Search</string>
+                 <string>🔍 Suche</string>
                 </property>
                </widget>
               </item>
@@ -3635,14 +3642,14 @@ The resulting ISO can be used to:
               <item>
                <widget class="QPushButton" name="paruInstallPackageButton">
                 <property name="text">
-                 <string>Install Selected</string>
+                 <string>Ausgewählte installieren</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QPushButton" name="paruUninstallPackageButton">
                 <property name="text">
-                 <string>Uninstall Selected</string>
+                 <string>Ausgewählte deinstallieren</string>
                 </property>
                </widget>
               </item>
@@ -3674,7 +3681,7 @@ The resulting ISO can be used to:
            <bool>true</bool>
           </property>
           <property name="placeholderText">
-           <string>Package operation output will appear here...</string>
+           <string>Ausgabe Paketvorgang wird hier angezeigt...</string>
           </property>
           <property name="font">
            <font>
@@ -3701,19 +3708,19 @@ The resulting ISO can be used to:
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
-     <string>File</string>
+     <string>Datei</string>
     </property>
     <addaction name="actionExit"/>
    </widget>
    <widget class="QMenu" name="menuPreferences">
     <property name="title">
-     <string>Preferences</string>
+     <string>Präferenzen</string>
     </property>
     <addaction name="actionShowHideTabs"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
-     <string>Help</string>
+     <string>Hilfe</string>
     </property>
     <addaction name="actionAbout"/>
    </widget>
@@ -3724,12 +3731,12 @@ The resulting ISO can be used to:
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionExit">
    <property name="text">
-    <string>Exit</string>
+    <string>Beenden</string>
    </property>
   </action>
   <action name="actionAbout">
    <property name="text">
-    <string>About</string>
+    <string>Über</string>
    </property>
   </action>
   <action name="actionShowHideTabs">
