@@ -195,16 +195,16 @@ void MainWindow::on_actionAbout_triggered() {
     
     QString aboutText = QString(
         "<h2>Arch OS Tools</h2>"
-        "<p><b>Created by Xetal with ❤️ for Arch Linux and CachyOS</b></p>"
-        "<p>A humble collection of system management tools designed to make "
-        "your Linux experience smoother and more enjoyable.</p>"
-        "<p>This application was crafted with care to help you manage your "
-        "system effortlessly, from drive management to package handling, "
-        "system tweaks, and more.</p>"
-        "<p><i>Thank you for using Arch S Tools!</i></p>"
+        "<p><b>Entwickelt von Xetal mit ❤️ für Arch Linux und CachyOS</b></p>"
+        "<p>Eine bescheidene Sammlung von Systemverwaltungswerkzeugen, die dazu entwickelt wurden, "
+        "dir dein Linux-Erlebnis reibungsloser und angenehmer zu gestalten.</p>"
+        "<p>Diese Anwendung wurde mit Sorgfalt entwickelt, um dir bei der Verwaltung deines "
+        "System mühelos, von der Laufwerksverwaltung bis zur Paketabwicklung, "
+        "Systemoptimierungen und mehr zu helfen.</p>"
+        "<p><i>Vielen Dank, dass du Arch S Tools verwendest!</i></p>"
         "<hr>"
         "<p style='color: #666; font-size: 10px;'>"
-        "Built with Qt, C++ and love for the Linux community"
+        "Entwickelt mit Qt, C++ und Liebe zur Linux-Community"
         "</p>"
     );
     
@@ -291,7 +291,7 @@ void MainWindow::applyTabVisibility() {
     
     // Define tab order and titles
     QMap<QString, QString> tabTitles;
-    tabTitles["driveToolsTab"] = "Laufwerk-Tools";
+    tabTitles["driveToolsTab"] = "Laufwerk";
     tabTitles["shellToolsTab"] = "Shell Tools";
     tabTitles["servicesTab"] = "Dienste/Startup";
     tabTitles["tweaksTab"] = "Tweaks";
