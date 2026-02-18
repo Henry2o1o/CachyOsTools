@@ -706,21 +706,21 @@
                <item>
                 <widget class="QPushButton" name="tmpfsApplyButton">
                  <property name="text">
-                  <string>✅ Apply</string>
+                  <string>✅ Anwenden</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="tmpfsBackupButton">
                  <property name="text">
-                  <string>💾 Backup</string>
+                  <string>💾 Sicherung</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="tmpfsConfigButton">
                  <property name="text">
-                  <string>✏️ Edit Config</string>
+                  <string>✏️ Konfiguration bearbeiten</string>
                  </property>
                 </widget>
                </item>
@@ -767,7 +767,7 @@
                  <item>
                   <widget class="QPushButton" name="performanceHacksApplyButton">
                    <property name="text">
-                    <string>✅ Apply</string>
+                    <string>✅ Anwenden</string>
                    </property>
                   </widget>
                  </item>
@@ -791,28 +791,28 @@
                  <item>
                   <widget class="QPushButton" name="performanceHacksBackupButton1">
                    <property name="text">
-                    <string>💾 Backup updatedb.conf</string>
+                    <string>💾 Sicherung updatedb.conf</string>
                    </property>
                   </widget>
                  </item>
                  <item>
                   <widget class="QPushButton" name="performanceHacksConfigButton1">
                    <property name="text">
-                    <string>✏️ Edit /etc/updatedb.conf</string>
+                    <string>✏️ Bearbeiten /etc/updatedb.conf</string>
                    </property>
                   </widget>
                  </item>
                  <item>
                   <widget class="QPushButton" name="performanceHacksBackupButton2">
                    <property name="text">
-                    <string>💾 Backup mkinitcpio.conf</string>
+                    <string>💾 Sicherung mkinitcpio.conf</string>
                    </property>
                   </widget>
                  </item>
                  <item>
                   <widget class="QPushButton" name="performanceHacksConfigButton2">
                    <property name="text">
-                    <string>✏️ Edit /etc/mkinitcpio.conf</string>
+                    <string>✏️ Bearbeiten /etc/mkinitcpio.conf</string>
                    </property>
                   </widget>
                  </item>
@@ -838,7 +838,7 @@
           </widget>
           <widget class="QWidget" name="securityTab">
            <attribute name="title">
-            <string>🔒 Security</string>
+            <string>🔒 Sicherheit</string>
            </attribute>
            <layout class="QVBoxLayout" name="securityLayout">
             <item>
@@ -879,21 +879,21 @@
                <item>
                 <widget class="QPushButton" name="mitigationsApplyButton">
                  <property name="text">
-                  <string>✅ Apply</string>
+                  <string>✅ Anwenden</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="mitigationsBackupButton">
                  <property name="text">
-                  <string>💾 Backup</string>
+                  <string>💾 Sicherung</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="mitigationsConfigButton">
                  <property name="text">
-                  <string>✏️ Edit Config</string>
+                  <string>✏️ Konfiguration bearbeiten</string>
                  </property>
                 </widget>
                </item>
@@ -938,21 +938,21 @@
                <item>
                 <widget class="QPushButton" name="ptraceApplyButton">
                  <property name="text">
-                  <string>✅ Apply</string>
+                  <string>✅ Anwenden</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="ptraceBackupButton">
                  <property name="text">
-                  <string>💾 Backup</string>
+                  <string>💾 Sicherung</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="ptraceConfigButton">
                  <property name="text">
-                  <string>✏️ Edit Config</string>
+                  <string>✏️ Konfiguration bearbeiten</string>
                  </property>
                 </widget>
                </item>
@@ -997,21 +997,21 @@
                <item>
                 <widget class="QPushButton" name="hidepidApplyButton">
                  <property name="text">
-                  <string>✅ Apply</string>
+                  <string>✅ Anwenden</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="hidepidBackupButton">
                  <property name="text">
-                  <string>💾 Backup</string>
+                  <string>💾 Sicherung</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="hidepidConfigButton">
                  <property name="text">
-                  <string>✏️ Edit Config</string>
+                  <string>✏️ Konfiguration bearbeiten</string>
                  </property>
                 </widget>
                </item>
@@ -1056,21 +1056,21 @@
                <item>
                 <widget class="QPushButton" name="firewallApplyButton">
                  <property name="text">
-                  <string>✅ Apply</string>
+                  <string>✅ Anwenden</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="firewallBackupButton">
                  <property name="text">
-                  <string>💾 Backup</string>
+                  <string>💾 Sicherung</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="firewallConfigButton">
                  <property name="text">
-                  <string>✏️ Edit Config</string>
+                  <string>✏️ Konfiguration bearbeiten</string>
                  </property>
                 </widget>
                </item>
@@ -1135,21 +1135,21 @@
                <item>
                 <widget class="QPushButton" name="ipv6ApplyButton">
                  <property name="text">
-                  <string>✅ Apply</string>
+                  <string>✅ Anwenden</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="ipv6BackupButton">
                  <property name="text">
-                  <string>💾 Backup</string>
+                  <string>💾 Sicherung</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="ipv6ConfigButton">
                  <property name="text">
-                  <string>✏️ Edit Config</string>
+                  <string>✏️ Konfiguration bearbeiten</string>
                  </property>
                 </widget>
                </item>
@@ -1159,7 +1159,7 @@
             <item>
              <widget class="QGroupBox" name="dnsGroupBox">
               <property name="title">
-               <string>DNS Configuration</string>
+               <string>DNS-Konfiguration</string>
               </property>
               <layout class="QHBoxLayout" name="dnsLayout">
                <item>
