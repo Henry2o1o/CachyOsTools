@@ -25,7 +25,7 @@ void MainWindow::setupDriveTable()
 {
     // Set up table headers
     QStringList headers;
-    headers << "Device Name" << "Device Path" << "Size" << "Type" << "Label" << "Mount Point" << "Status" << "Disk ID";
+    headers << "Gerätename" << "Gerätepfad" << "Größe" << "Typ" << "Label" << "Mount-Punkt" << "Status" << "Laufwerk-ID";
     ui->drivesTable->setColumnCount(headers.size());
     ui->drivesTable->setHorizontalHeaderLabels(headers);
     
