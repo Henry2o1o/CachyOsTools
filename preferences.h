@@ -71,18 +71,18 @@ void MainWindow::showPreferencesDialog() {
     
     QMap<QString, QCheckBox*> checkboxes;
     QMap<QString, QString> tabNames;
-    tabNames["driveToolsTab"] = "Drive Tools";
+    tabNames["driveToolsTab"] = "Laufwerkswerk-Tools";
     tabNames["shellToolsTab"] = "Shell Tools";
-    tabNames["servicesTab"] = "Services/Startup";
+    tabNames["servicesTab"] = "Dienste/Startup";
     tabNames["tweaksTab"] = "Tweaks";
     tabNames["kvmTab"] = "DUAL GPU KVM";
-    tabNames["configTab"] = "System Config";
-    tabNames["logsTab"] = "System Logs";
-    tabNames["backupTab"] = "Backup";
-    tabNames["restoreTab"] = "Restore";
+    tabNames["configTab"] = "Systemkonfiguration";
+    tabNames["logsTab"] = "Systemprotokolle";
+    tabNames["backupTab"] = "Sicherung";
+    tabNames["restoreTab"] = "Wiederherstellen";
     tabNames["isoCreatorTab"] = "System ISO Creator";
-    tabNames["packageManagerTab"] = "Package Manager";
-    tabNames["networkTab"] = "Network";
+    tabNames["packageManagerTab"] = "Paketmanager";
+    tabNames["networkTab"] = "Netzwerk";
     
     for (auto it = tabNames.begin(); it != tabNames.end(); ++it) {
         QCheckBox *checkbox = new QCheckBox(it.value(), tabsTab);
@@ -291,18 +291,18 @@ void MainWindow::applyTabVisibility() {
     
     // Define tab order and titles
     QMap<QString, QString> tabTitles;
-    tabTitles["driveToolsTab"] = "Drive Tools";
+    tabTitles["driveToolsTab"] = "Laufwerk-Tools";
     tabTitles["shellToolsTab"] = "Shell Tools";
-    tabTitles["servicesTab"] = "Services/Startup";
+    tabTitles["servicesTab"] = "Dienste/Startup";
     tabTitles["tweaksTab"] = "Tweaks";
     tabTitles["kvmTab"] = "DUAL GPU KVM";
-    tabTitles["configTab"] = "System Config";
-    tabTitles["logsTab"] = "System Logs";
-    tabTitles["backupTab"] = "Backup";
-    tabTitles["restoreTab"] = "Restore";
+    tabTitles["configTab"] = "Systemkonfiguration";
+    tabTitles["logsTab"] = "Systemprotokolle";
+    tabTitles["backupTab"] = "Sicherung";
+    tabTitles["restoreTab"] = "Wiederherstellen";
     tabTitles["isoCreatorTab"] = "System ISO Creator";
-    tabTitles["packageManagerTab"] = "Package Manager";
-    tabTitles["networkTab"] = "Network";
+    tabTitles["packageManagerTab"] = "Paketmanager";
+    tabTitles["networkTab"] = "Netzwerk";
     
     QStringList tabOrder = {
         "driveToolsTab", "shellToolsTab", "servicesTab", "tweaksTab",

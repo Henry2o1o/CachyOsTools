@@ -1094,13 +1094,13 @@
           </widget>
           <widget class="QWidget" name="networkTweaksTab">
            <attribute name="title">
-            <string>🌐 Network</string>
+            <string>🌐 Netzwerk</string>
            </attribute>
            <layout class="QVBoxLayout" name="networkTweaksLayout">
             <item>
              <widget class="QGroupBox" name="ipv6GroupBox">
               <property name="title">
-               <string>IPv6 System-Wide</string>
+               <string>IPv6 Systemweit</string>
               </property>
               <layout class="QHBoxLayout" name="ipv6Layout">
                <item>
