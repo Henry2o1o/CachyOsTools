@@ -174,16 +174,16 @@ void MainWindow::on_createIsoButton_clicked()
 
                 if (exitCode == 0) {
                     ui->isoProgressBar->setValue(100);
-                    ui->isoStatusLabel->setPlainText(ui->isoStatusLabel->toPlainText() + "\n✅ System clone ISO created successfully!");
-                    QMessageBox::information(this, "Success",
-                                             "System clone ISO has been created successfully!\n\n"
-                                             "The ISO contains an exact copy of your current system "
-                                             "and can be used to install it on other machines.");
+                    ui->isoStatusLabel->setPlainText(ui->isoStatusLabel->toPlainText() + "\n✅ Systemklon-ISO erfolgreich erstellt!");
+                    QMessageBox::information(this, "Erfolgt",
+                                             "Systemklon-ISO wurde erfolgreich erstellt!\n\n"
+                                             "ISO-Datei enthält eine exakte Kopie deines aktuellen Systems "
+                                             "und kann zur Installation auf anderen Maschinen verwendet werden.");
                 } else {
                     ui->isoProgressBar->setValue(0);
                     ui->isoStatusLabel->setPlainText(ui->isoStatusLabel->toPlainText() + "\n❌ ISO creation failed. Check the output above for details.");
-                    QMessageBox::critical(this, "Error",
-                                          "Failed to create ISO. Check the output above for details.\n\n"
+                    QMessageBox::critical(this, "Fehler",
+                                          "ISO-Datei konnte nicht erstellt werden. Weitere Details findest du in der obigen Ausgabe.\n\n"
                                           "Exit code: " + QString::number(exitCode));
                 }
 
@@ -196,9 +196,9 @@ void MainWindow::on_createIsoButton_clicked()
         ui->createIsoButton->setEnabled(true);
         //ui->estimateSizeButton->setEnabled(true);
         ui->isoProgressBar->setValue(0);
-        ui->isoStatusLabel->setPlainText(ui->isoStatusLabel->toPlainText() + "\n❌ Process error occurred");
-        QMessageBox::critical(this, "Process Error",
-                              "Error running ISO creation script: " + QString::number(error));
+        ui->isoStatusLabel->setPlainText(ui->isoStatusLabel->toPlainText() + "\n❌ Prozessfehler aufgetreten.");
+        QMessageBox::critical(this, "Prozessfehler",
+                              "Fehler beim Ausführen des ISO-Erstellungsskripts: " + QString::number(error));
         QFile::remove(scriptPath);
     });
 
@@ -207,7 +207,7 @@ void MainWindow::on_createIsoButton_clicked()
     process->setProcessEnvironment(env);
 
     // Debug: Show script path
-    ui->isoStatusLabel->setPlainText("Starting system clone ISO creation...\nScript path: " + scriptPath + "\nWaiting for output...\n");
+    ui->isoStatusLabel->setPlainText("Systemklon-ISO-Erstellung wird gestartet...\nSkriptpfad: " + scriptPath + "\nWarten auf Ausgabe...\n");
 
     process->start("bash", QStringList() << scriptPath);
 }
