@@ -3741,7 +3741,7 @@ Die resultierende ISO-Datei kann verwendet werden, um:
   </action>
   <action name="actionShowHideTabs">
    <property name="text">
-    <string>Show/Hide Tabs</string>
+    <string>Tabs anzeigen/ausblenden</string>
    </property>
   </action>
  </widget>

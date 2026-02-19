@@ -30,7 +30,7 @@ void MainWindow::on_actionShowHideTabs_triggered() {
 void MainWindow::showPreferencesDialog() {
     // Create comprehensive preferences dialog with tabs
     QDialog *dialog = new QDialog(this);
-    dialog->setWindowTitle("Preferences");
+    dialog->setWindowTitle("Präferenzen");
     dialog->setMinimumSize(600, 500);
     
     QVBoxLayout *mainLayout = new QVBoxLayout(dialog);
@@ -42,17 +42,17 @@ void MainWindow::showPreferencesDialog() {
     QWidget *generalTab = new QWidget();
     QVBoxLayout *generalLayout = new QVBoxLayout(generalTab);
     
-    QGroupBox *windowGroup = new QGroupBox("Window Settings", generalTab);
+    QGroupBox *windowGroup = new QGroupBox("Fenstereinstellungen", generalTab);
     QVBoxLayout *windowLayout = new QVBoxLayout(windowGroup);
     
-    QCheckBox *rememberSizeCheck = new QCheckBox("Remember window size and position", windowGroup);
+    QCheckBox *rememberSizeCheck = new QCheckBox("Fenstergröße und -position beachten", windowGroup);
     rememberSizeCheck->setChecked(loadWindowSizeEnabled());
     windowLayout->addWidget(rememberSizeCheck);
     
-    QGroupBox *autoSaveGroup = new QGroupBox("Auto Save/Load", generalTab);
+    QGroupBox *autoSaveGroup = new QGroupBox("Autom. Speichern/Laden", generalTab);
     QVBoxLayout *autoSaveLayout = new QVBoxLayout(autoSaveGroup);
     
-    QCheckBox *autoSaveCheck = new QCheckBox("Auto-save preferences on change", autoSaveGroup);
+    QCheckBox *autoSaveCheck = new QCheckBox("Einstellungen bei Änderung automatisch speichern", autoSaveGroup);
     autoSaveCheck->setChecked(loadAutoSaveEnabled());
     autoSaveLayout->addWidget(autoSaveCheck);
     
@@ -60,18 +60,18 @@ void MainWindow::showPreferencesDialog() {
     generalLayout->addWidget(autoSaveGroup);
     generalLayout->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding));
     
-    tabWidget->addTab(generalTab, "General");
+    tabWidget->addTab(generalTab, "Allgemein");
     
     // Tab 2: Tab Visibility (existing functionality)
     QWidget *tabsTab = new QWidget();
     QVBoxLayout *tabsLayout = new QVBoxLayout(tabsTab);
     
-    QLabel *tabsLabel = new QLabel("Select which tabs to show:", tabsTab);
+    QLabel *tabsLabel = new QLabel("Anzuzeigende Tabs auswählen:", tabsTab);
     tabsLayout->addWidget(tabsLabel);
     
     QMap<QString, QCheckBox*> checkboxes;
     QMap<QString, QString> tabNames;
-    tabNames["driveToolsTab"] = "Laufwerkswerk-Tools";
+    tabNames["driveToolsTab"] = "Laufwerk-Tools";
     tabNames["shellToolsTab"] = "Shell Tools";
     tabNames["servicesTab"] = "Dienste/Startup";
     tabNames["tweaksTab"] = "Tweaks";
@@ -93,21 +93,21 @@ void MainWindow::showPreferencesDialog() {
     }
     
     tabsLayout->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding));
-    tabWidget->addTab(tabsTab, "Tab Visibility");
+    tabWidget->addTab(tabsTab, "Tab-Sichtbarkeit");
     
     // Add more tabs for each main tab's preferences (placeholder for now)
     // Drive Tools Tab
     QWidget *driveToolsPrefTab = new QWidget();
     QVBoxLayout *driveToolsPrefLayout = new QVBoxLayout(driveToolsPrefTab);
-    QLabel *driveToolsLabel = new QLabel("Drive Tools preferences will be added here", driveToolsPrefTab);
+    QLabel *driveToolsLabel = new QLabel("Drive Tools-Einstellungen werden hier hinzugefügt.", driveToolsPrefTab);
     driveToolsPrefLayout->addWidget(driveToolsLabel);
     driveToolsPrefLayout->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding));
-    tabWidget->addTab(driveToolsPrefTab, "Drive Tools");
+    tabWidget->addTab(driveToolsPrefTab, "Laufwerk-Tools");
     
     // Shell Tools Tab
     QWidget *shellToolsPrefTab = new QWidget();
     QVBoxLayout *shellToolsPrefLayout = new QVBoxLayout(shellToolsPrefTab);
-    QLabel *shellToolsLabel = new QLabel("Shell Tools preferences will be added here", shellToolsPrefTab);
+    QLabel *shellToolsLabel = new QLabel("Shell Tools-Einstellungen werden hier hinzugefügt", shellToolsPrefTab);
     shellToolsPrefLayout->addWidget(shellToolsLabel);
     shellToolsPrefLayout->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding));
     tabWidget->addTab(shellToolsPrefTab, "Shell Tools");
@@ -115,26 +115,26 @@ void MainWindow::showPreferencesDialog() {
     // Package Manager Tab
     QWidget *packageManagerPrefTab = new QWidget();
     QVBoxLayout *packageManagerPrefLayout = new QVBoxLayout(packageManagerPrefTab);
-    QLabel *packageManagerLabel = new QLabel("Package Manager preferences will be added here", packageManagerPrefTab);
+    QLabel *packageManagerLabel = new QLabel("Einstellungen des Paketmanagers werden hier hinzugefügt.", packageManagerPrefTab);
     packageManagerPrefLayout->addWidget(packageManagerLabel);
     packageManagerPrefLayout->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding));
-    tabWidget->addTab(packageManagerPrefTab, "Package Manager");
+    tabWidget->addTab(packageManagerPrefTab, "Pakete-Manager");
     
     // Network Tab
     QWidget *networkPrefTab = new QWidget();
     QVBoxLayout *networkPrefLayout = new QVBoxLayout(networkPrefTab);
-    QLabel *networkLabel = new QLabel("Network preferences will be added here", networkPrefTab);
+    QLabel *networkLabel = new QLabel("Netzwerkeinstellungen werden hier hinzugefügt.", networkPrefTab);
     networkPrefLayout->addWidget(networkLabel);
     networkPrefLayout->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding));
-    tabWidget->addTab(networkPrefTab, "Network");
+    tabWidget->addTab(networkPrefTab, "Netzwerk");
     
     mainLayout->addWidget(tabWidget);
     
     // Buttons
     QHBoxLayout *buttonLayout = new QHBoxLayout();
     QPushButton *okButton = new QPushButton("OK", dialog);
-    QPushButton *cancelButton = new QPushButton("Cancel", dialog);
-    QPushButton *applyButton = new QPushButton("Apply", dialog);
+    QPushButton *cancelButton = new QPushButton("Abbrechen", dialog);
+    QPushButton *applyButton = new QPushButton("Anwenden", dialog);
     buttonLayout->addWidget(okButton);
     buttonLayout->addWidget(cancelButton);
     buttonLayout->addWidget(applyButton);
