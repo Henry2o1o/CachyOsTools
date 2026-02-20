@@ -116,28 +116,28 @@ void MainWindow::on_createIsoButton_clicked()
 
         if (output.contains("Preparing HOME-only build tree")) {
             ui->isoProgressBar->setValue(5);
-            ui->isoStatusLabel->setPlainText("📁 Preparing build environment...\n");
+            ui->isoStatusLabel->setPlainText("📁 Vorbereitung der Bauumgebung...\n");
         } else if (output.contains("Creating full-system snapshot")) {
             ui->isoProgressBar->setValue(10);
-            ui->isoStatusLabel->setPlainText("📸 Creating system snapshot...\n");
+            ui->isoStatusLabel->setPlainText("📸 System-Snapshot wird erstellt...\n");
         } else if (output.contains("Packing snapshot")) {
             ui->isoProgressBar->setValue(30);
-            ui->isoStatusLabel->setPlainText("🗜️ Compressing system snapshot...\n");
+            ui->isoStatusLabel->setPlainText("🗜️ Komprimierung des System-Snapshots...\n");
         } else if (output.contains("Cleaning up temporary snapshot directory")) {
             ui->isoProgressBar->setValue(35);
-            ui->isoStatusLabel->setPlainText("🧹 Cleaning up snapshot directory...\n");
+            ui->isoStatusLabel->setPlainText("🧹 Bereinigung des Snapshot-Verzeichnisses...\n");
         } else if (output.contains("Embedding snapshot")) {
             ui->isoProgressBar->setValue(50);
-            ui->isoStatusLabel->setPlainText("🔧 Preparing ISO structure...\n");
+            ui->isoStatusLabel->setPlainText("🔧 Vorbereitung der ISO-Struktur...\n");
         } else if (output.contains("Building ISO")) {
             ui->isoProgressBar->setValue(70);
-            ui->isoStatusLabel->setPlainText("🏗️ Building bootable ISO...\n");
+            ui->isoStatusLabel->setPlainText("🏗️ Erstellung einer bootfähigen ISO-Datei...\n");
         } else if (output.contains("Final cleanup")) {
             ui->isoProgressBar->setValue(95);
-            ui->isoStatusLabel->setPlainText("🧹 Final cleanup...\n");
+            ui->isoStatusLabel->setPlainText("🧹 Schlussbereinigung...\n");
         } else if (output.contains("ISO ready")) {
             ui->isoProgressBar->setValue(100);
-            ui->isoStatusLabel->setPlainText("✅ ISO creation completed successfully!\n");
+            ui->isoStatusLabel->setPlainText("✅ ISO-Erstellung erfolgreich abgeschlossen!\n");
         }
 
         // Auto-scroll to bottom
