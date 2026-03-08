@@ -2290,7 +2290,7 @@
             <item>
              <widget class="QLabel" name="destPathLabel">
               <property name="text">
-               <string>Destination Folder:</string>
+               <string>Zielordner:</string>
               </property>
              </widget>
             </item>

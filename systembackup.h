@@ -74,14 +74,14 @@ bool MainWindow::validateBackupSelection() {
         return false;
     }
     
-    qDebug() << "  Validation PASSED";
+    qDebug() << "  Validierung ERFOLGREICH";
     return true;
 }
 void MainWindow::updateBackupSummary() {
     QString src = getSelectedSourcePath();
     QString dst = getSelectedDestPath();
     // Update the new summary label at the bottom
-    ui->backupPathSummaryLabel->setText("Quelle: " + src + "\nDestination: " + dst);
+    ui->backupPathSummaryLabel->setText("Quelle: " + src + "\nZiel: " + dst);
     
     bool isValid = validateBackupSelection();
     if (!isValid) {
@@ -90,7 +90,7 @@ void MainWindow::updateBackupSummary() {
         return;
     }
     
-    ui->backupSummaryLabel->setText("System backup from: " + src + "\nTo: " + dst);
+    ui->backupSummaryLabel->setText("Systemsicherung von: " + src + "\nNach: " + dst);
     ui->startBackupButton->setEnabled(true);
 }
 void MainWindow::on_startBackupButton_clicked() {

@@ -24,7 +24,7 @@ void MainWindow::refreshNetworkInfo() {
     ui->ipAddressTable->setRowCount(0);
     ui->ipAddressTable->setColumnCount(4);
     QStringList headers;
-    headers << "Interface" << "IP Address" << "Netmask" << "Status";
+    headers << "Interface" << "IP-Addresse" << "Netzmaske" << "Status";
     ui->ipAddressTable->setHorizontalHeaderLabels(headers);
     ui->ipAddressTable->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
     ui->ipAddressTable->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
