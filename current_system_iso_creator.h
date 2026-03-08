@@ -296,7 +296,7 @@ QString MainWindow::createIsoScript(const QString &isoName, const QString &outpu
         out << "mkdir -p \"/var/lib/pacman/sync\"\n";
         out << "if [[ -d \"$OFFLINE_CACHE_DIR/offline-packages/sync\" ]]; then\n";
         out << "    cp -r \"$OFFLINE_CACHE_DIR/offline-packages/sync/\"* \"/var/lib/pacman/sync/\" 2>/dev/null || true\n";
-        out << "    echo \"[*] Package databases copied successfully\"\n";
+        out << "    echo \"[*] Paketdatenbanken erfolgreich kopiert\"\n";
         out << "else\n";
         out << "    echo \"[WARNING] Package databases directory not found in offline package\"\n";
         out << "fi\n";

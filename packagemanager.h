@@ -88,7 +88,7 @@ void MainWindow::refreshPacmanInstalled() {
         ui->pacmanInstalledTable->setItem(row, 3, new QTableWidgetItem("...")); // Will be loaded on demand
     }
     
-    ui->packageOutputText->setPlainText(QString("✅ Loaded %1 installed packages. Double-click a package to load details.").arg(lines.size()));
+    ui->packageOutputText->setPlainText(QString("✅ %1 installierte Pakete geladen. Doppelklicken auf ein Paket, um Details anzuzeigen.").arg(lines.size()));
 }
 
 void MainWindow::searchPacmanAur(const QString &query, int searchMode, int searchType) {
