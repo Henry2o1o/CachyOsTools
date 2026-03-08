@@ -42,14 +42,14 @@ void MainWindow::on_createIsoButton_clicked()
     }
 
     // Confirm with user
-    QString message = QString("This will create a system clone ISO with the following settings:\n\n"
+    QString message = QString("Dadurch wird eine Systemklon-ISO mit den folgenden Einstellungen erstellt:\n\n"
     "ISO Name: %1\n"
-    "Output Directory: %2\n\n"
-    "This process will:\n"
-    "• Create a complete snapshot of your system\n"
-    "• Build a bootable ISO with installer\n"
-    "• Take several minutes to complete\n\n"
-    "Do you want to continue?").arg(isoName, outputDir);
+    "Ausgabeverzeichnis: %2\n\n"
+    "Dieser Prozess erstellt:\n"
+    "• eine vollständige Momentaufnahme deines Systems\n"
+    "• eine bootfähige ISO-Datei mit dem Installationsprogramm\n"
+    "• Nehme dir einige Minuten Zeit, um dies zu erledigen.\n\n"
+    "Möchtest du fortfahren?").arg(isoName, outputDir);
 
     QMessageBox::StandardButton reply = QMessageBox::question(this, "ISO-Erstellung bestätigen",
                                                               message,
@@ -78,9 +78,9 @@ void MainWindow::on_createIsoButton_clicked()
     if (offlineMode) {
         QFileInfo fileInfo(offlinePackagePath);
         if (!fileInfo.exists() || !fileInfo.isFile()) {
-            QMessageBox::critical(this, "Offline Package Not Found",
-                                  QString("Offline mode is selected but the package file '%1' was not found.\n\n"
-                                  "Please download the offline package first or switch to online mode.").arg(OFFLINE_PACKAGE_FILENAME));
+            QMessageBox::critical(this, "Offline-Paket nicht gefunden",
+                                  QString("Offline-Modus ausgewählt, aber die Paketdatei '%1' wurde nicht gefunden.\n\n"
+                                  "Zuerst das Offline-Paket herunterladen oder in den Online-Modus wechseln.").arg(OFFLINE_PACKAGE_FILENAME));
             ui->createIsoButton->setEnabled(true);
             return;
         }
@@ -516,7 +516,7 @@ QString MainWindow::formatSize(qint64 bytes)
 void MainWindow::on_onlineModeRadio_toggled(bool checked)
 {
     if (checked) {
-        ui->offlineStatusLabel->setText("Online mode selected - packages will be downloaded during ISO creation");
+        ui->offlineStatusLabel->setText("Online-Modus ausgewählt - Pakete werden während der ISO-Erstellung heruntergeladen");
         ui->offlineStatusLabel->setStyleSheet("color: #666666;");
         ui->downloadOfflineButton->setVisible(false);
         ui->checkAvailabilityButton->setVisible(false);
@@ -543,19 +543,19 @@ void MainWindow::checkOfflinePackageAvailability()
     if (newFileInfo.exists() && newFileInfo.isFile()) {
         qint64 fileSize = newFileInfo.size();
         QString sizeStr = formatSize(fileSize);
-        ui->offlineStatusLabel->setText(QString("✅ %1 Found and Ready (%2)").arg(newFilename, sizeStr));
+        ui->offlineStatusLabel->setText(QString("✅ %1 Gefunden und bereit (%2)").arg(newFilename, sizeStr));
         ui->offlineStatusLabel->setStyleSheet("color: #28a745; font-weight: bold;");
         ui->downloadOfflineButton->setVisible(false);
     } else if (oldFileInfo.exists() && oldFileInfo.isFile()) {
         qint64 fileSize = oldFileInfo.size();
         QString sizeStr = formatSize(fileSize);
-        ui->offlineStatusLabel->setText(QString("✅ %1 Found and Ready (%2) - Consider upgrading to complete package").arg(oldFilename, sizeStr));
+        ui->offlineStatusLabel->setText(QString("✅ %1 Gefunden und bereit (%2) - Erwäge Upgrade auf das Komplettpaket").arg(oldFilename, sizeStr));
         ui->offlineStatusLabel->setStyleSheet("color: #28a745; font-weight: bold;");
         ui->downloadOfflineButton->setVisible(false);
         // Update the path to use the old file
         offlinePackagePath = oldFileInfo.absoluteFilePath();
     } else {
-        ui->offlineStatusLabel->setText("❌ Offline package not found. Click download button to get it.");
+        ui->offlineStatusLabel->setText("❌ Offline-Paket nicht gefunden. Auf die Schaltfläche Herunterladen klicken, um es zu erhalten.");
         ui->offlineStatusLabel->setStyleSheet("color: #dc3545; font-weight: bold;");
         ui->downloadOfflineButton->setVisible(true);
     }
@@ -564,17 +564,17 @@ void MainWindow::checkOfflinePackageAvailability()
 void MainWindow::on_downloadOfflineButton_clicked()
 {
     QString instructions = QString(
-        "Manual Download Instructions:\n\n"
-        "1. Your default browser will open to the Google Drive page\n"
-        "2. Click the download button on the Google Drive page\n"
-        "3. If you see a warning page, click 'Download anyway'\n"
-        "4. Save the file as '%1' in this directory:\n"
+        "Anleitung zum Handbuch herunterladen:\n\n"
+        "1. Dein Standardbrowser wird die Google Drive-Seite öffnen.\n"
+        "2. Klicke auf der Google Drive-Seite auf die Schaltfläche Herunterladen.\n"
+        "3. Wenn eine Warnseite angezeigt wird, klicke auf 'Trotzdem herunterladen'.\n"
+        "4. Speichere die Datei unter dem Namen '%1' in diesem Verzeichnis:\n"
         "   %2\n\n"
-        "5. Once downloaded, return to this application and click 'Check Availability'\n\n"
-        "Note: The file is approximately 3.8GB and may take some time to download."
+        "5. Nach dem Herunterladen zu dieser Anwendung zurückkehren und auf 'Verfügbarkeit prüfen' klicken.'\n\n"
+        "Hinweis: Die Datei ist ca. 3.8GB groß und der Download kann einige Zeit in Anspruch nehmen."
     ).arg(OFFLINE_PACKAGE_FILENAME, QDir::currentPath());
 
-    QMessageBox::information(this, "Download Instructions", instructions);
+    QMessageBox::information(this, "Download-Anleitung", instructions);
 
     // Open the Google Drive page in the default browser
     QDesktopServices::openUrl(QUrl("https://drive.google.com/file/d/1U8Z1MuOTHBJXDqLbgtKoUSKtUqZvBJ8L/view?usp=drive_link"));
