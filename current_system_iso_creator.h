@@ -260,10 +260,10 @@ QString MainWindow::createIsoScript(const QString &isoName, const QString &outpu
         out << "OFFLINE_PACKAGE_NEW=\"" << QDir::currentPath() << "/" << OFFLINE_PACKAGE_FILENAME << "\"\n";
         out << "OFFLINE_PACKAGE_OLD=\"" << QDir::currentPath() << "/offline-iso-packages.tar.gz\"\n";
         out << "OFFLINE_CACHE_DIR=\"$BASE/xiso/offline-cache\"\n\n";
-        out << "echo \"[*] Setting up offline mode...\"\n";
+        out << "echo \"[*] Offline-Modus einrichten...\"\n";
         out << "if [[ -f \"$OFFLINE_PACKAGE_NEW\" ]]; then\n";
         out << "    OFFLINE_PACKAGE=\"$OFFLINE_PACKAGE_NEW\"\n";
-        out << "    echo \"[*] Using complete offline package: $OFFLINE_PACKAGE\"\n";
+        out << "    echo \"[*] Verwendung des kompletten Offline-Pakets: $OFFLINE_PACKAGE\"\n";
         out << "elif [[ -f \"$OFFLINE_PACKAGE_OLD\" ]]; then\n";
         out << "    OFFLINE_PACKAGE=\"$OFFLINE_PACKAGE_OLD\"\n";
         out << "    echo \"[*] Using legacy offline package: $OFFLINE_PACKAGE\"\n";
@@ -273,26 +273,26 @@ QString MainWindow::createIsoScript(const QString &isoName, const QString &outpu
         out << "    echo \"[ERROR]   $OFFLINE_PACKAGE_OLD\"\n";
         out << "    exit 1\n";
         out << "fi\n\n";
-        out << "echo \"[*] Extracting offline package cache...\"\n";
+        out << "echo \"[*] Offline-Paketcache extrahieren...\"\n";
         out << "mkdir -p \"$OFFLINE_CACHE_DIR\"\n";
-        out << "echo \"[*] Package file size: $(ls -lh \"$OFFLINE_PACKAGE\" | awk '{print $5}')\"\n";
+        out << "echo \"[*] Paketdateigröße: $(ls -lh \"$OFFLINE_PACKAGE\" | awk '{print $5}')\"\n";
         out << "tar -xzf \"$OFFLINE_PACKAGE\" -C \"$OFFLINE_CACHE_DIR\"\n";
         out << "if [[ $? -ne 0 ]]; then\n";
         out << "    echo \"[ERROR] Failed to extract offline package\"\n";
         out << "    echo \"[ERROR] Please check if the package file is corrupted\"\n";
         out << "    exit 1\n";
         out << "fi\n";
-        out << "echo \"[*] Extracted contents:\"\n";
+        out << "echo \"[*] Auszug aus dem Inhalt:\"\n";
         out << "ls -la \"$OFFLINE_CACHE_DIR/offline-packages/\" 2>/dev/null || echo \"[WARNING] Expected directory structure not found\"\n\n";
-        out << "echo \"[*] Setting up local package cache...\"\n";
+        out << "echo \"[*] Lokalen Paket-Cache einrichten...\"\n";
         out << "mkdir -p \"/var/cache/pacman/pkg\"\n";
         out << "if [[ -d \"$OFFLINE_CACHE_DIR/offline-packages/pkg\" ]]; then\n";
         out << "    cp -r \"$OFFLINE_CACHE_DIR/offline-packages/pkg/\"* \"/var/cache/pacman/pkg/\" 2>/dev/null || true\n";
-        out << "    echo \"[*] Packages copied successfully\"\n";
+        out << "    echo \"[*] Pakete erfolgreich kopiert\"\n";
         out << "else\n";
         out << "    echo \"[WARNING] Package directory not found in offline package\"\n";
         out << "fi\n";
-        out << "echo \"[*] Setting up local package databases...\"\n";
+        out << "echo \"[*] Einrichten lokaler Paketdatenbanken...\"\n";
         out << "mkdir -p \"/var/lib/pacman/sync\"\n";
         out << "if [[ -d \"$OFFLINE_CACHE_DIR/offline-packages/sync\" ]]; then\n";
         out << "    cp -r \"$OFFLINE_CACHE_DIR/offline-packages/sync/\"* \"/var/lib/pacman/sync/\" 2>/dev/null || true\n";
@@ -300,7 +300,7 @@ QString MainWindow::createIsoScript(const QString &isoName, const QString &outpu
         out << "else\n";
         out << "    echo \"[WARNING] Package databases directory not found in offline package\"\n";
         out << "fi\n";
-        out << "echo \"[*] Offline mode setup complete\"\n\n";
+        out << "echo \"[*] Offline-Modus-Einrichtung abgeschlossen\"\n\n";
     }
 
     out << "SNAPDIR=\"$BASE/xiso/snapshot\"     # rsync snapshot (temp)\n";
@@ -312,7 +312,7 @@ QString MainWindow::createIsoScript(const QString &isoName, const QString &outpu
     out << "# Everything must be under HOME\n";
     out << "case \"$BASE\" in \"$HOME\"/*) : ;; *) echo \"BASE must be under \\$HOME\"; exit 1 ;; esac\n\n";
 
-    out << "echo \"[*] Preparing HOME-only build tree under $BASE\"\n";
+    out << "echo \"[*] Vorbereitung des nur für home vorgesehenen Build-Tree unter $BASE\"\n";
     out << "mkdir -p \"$BASE\"\n";
     out << "cd \"$BASE\"\n";
     out << "rm -rf \"$PROFILE\"\n";
@@ -333,8 +333,8 @@ QString MainWindow::createIsoScript(const QString &isoName, const QString &outpu
     out << "done\n\n";
 
     out << "# === FULL SNAPSHOT of current system (EXACT STATE) ===\n";
-    out << "echo \"[*] Creating full-system snapshot at $SNAPDIR …\"\n";
-    out << "echo \"[*] Available space before snapshot:\"\n";
+    out << "echo \"[*] Erstellung eines vollständigen System-Snapshots unter $SNAPDIR …\"\n";
+    out << "echo \"[*] Verfügbarer Speicherplatz vor dem Snapshot:\"\n";
     out << "df -h . | tail -1\n";
     out << "run_sudo rm -rf \"$SNAPDIR\" \"$SNAP_TAR\"\n";
     out << "mkdir -p \"$SNAPDIR\"\n\n";
@@ -357,13 +357,13 @@ QString MainWindow::createIsoScript(const QString &isoName, const QString &outpu
     out << "echo \"[*] Packing snapshot to $SNAP_TAR (zstd -19)…\"\n";
     out << "run_sudo tar --xattrs --acls --numeric-owner -C \"$SNAPDIR\" -I 'zstd -19 -T0' -cpf \"$SNAP_TAR\" .\n";
     out << "run_sudo chown \"$USER:$USER\" \"$SNAP_TAR\"\n";
-    out << "echo \"[*] Snapshot compressed. Available space:\"\n";
+    out << "echo \"[*] Snapshot komprimiert. Verfügbarer Speicherplatz:\"\n";
     out << "df -h . | tail -1\n\n";
 
     out << "# free space - CRITICAL for small drives\n";
-    out << "echo \"[*] Cleaning up temporary snapshot directory to free space...\"\n";
+    out << "echo \"[*] Temporäres Snapshot-Verzeichnis wird bereinigt, um Speicherplatz freizugeben...\"\n";
     out << "run_sudo rm -rf \"$SNAPDIR\"\n";
-    out << "echo \"[*] Snapshot directory cleaned up. Available space:\"\n";
+    out << "echo \"[*] Snapshot-Verzeichnis bereinigt. Verfügbarer Speicherplatz:\"\n";
     out << "df -h . | tail -1\n\n";
 
     out << "# === Embed snapshot + installer into live ISO ===\n";
@@ -470,7 +470,7 @@ QString MainWindow::createIsoScript(const QString &isoName, const QString &outpu
 
     out << "# === Build ISO ===\n";
     out << "echo \"[*] Building ISO with mkarchiso (home-only dirs)…\"\n";
-    out << "echo \"[*] Available space before ISO build:\"\n";
+    out << "echo \"[*] Verfügbarer Platz vor ISO-Aufbau:\"\n";
     out << "df -h . | tail -1\n";
     out << "run_sudo rm -rf \"$WORK\" \"$OUT\"\n";
     out << "mkdir -p \"$OUT\"\n";
@@ -479,12 +479,12 @@ QString MainWindow::createIsoScript(const QString &isoName, const QString &outpu
     out << "echo\n";
     out << "echo \"[✓] ISO ready in: $OUT\"\n";
     out << "ls -lh \"$OUT\"/*.iso || true\n";
-    out << "echo \"[*] Final cleanup - removing work directory:\"\n";
+    out << "echo \"[*] Abschließende Bereinigung – Arbeitsverzeichnis wird entfernt:\"\n";
     out << "run_sudo rm -rf \"$WORK\"\n";
 
     // Clean up offline cache if used
     if (offlineMode) {
-        out << "echo \"[*] Cleaning up offline cache...\"\n";
+        out << "echo \"[*] Offline-Cache bereinigen...\"\n";
         out << "rm -rf \"$OFFLINE_CACHE_DIR\"\n";
     }
 

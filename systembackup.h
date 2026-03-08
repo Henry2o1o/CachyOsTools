@@ -60,7 +60,7 @@ bool MainWindow::validateBackupSelection() {
                 return false;
             }
         }
-        qDebug() << "  System backup validation: PASSED";
+        qDebug() << "  Systemsicherung-Validierung: BESTANDEN";
         return true;
     }
     
