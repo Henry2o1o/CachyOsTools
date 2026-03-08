@@ -159,7 +159,7 @@ void MainWindow::onLogProcessFinished(int exitCode, QProcess::ExitStatus exitSta
     
     if (exitCode == 0 || !output.isEmpty()) {
         ui->logContentTextEdit->setPlainText(output);
-        ui->logStatusLabel->setText(QString("Loaded %1 lines").arg(output.count('\n')));
+        ui->logStatusLabel->setText(QString(" %1 Zeilen geladen").arg(output.count('\n')));
     } else {
         ui->logContentTextEdit->setPlainText("Error loading log file or no content found.");
         ui->logStatusLabel->setText("Error");
