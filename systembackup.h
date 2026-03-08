@@ -26,9 +26,9 @@ bool MainWindow::validateBackupSelection() {
     QString dst = getSelectedDestPath();
     
     // Debug output
-    qDebug() << "Validating backup selection:";
-    qDebug() << "  Source:" << src;
-    qDebug() << "  Destination:" << dst;
+    qDebug() << "Sicherungsauswahl überprüfen:";
+    qDebug() << "  Quelle:" << src;
+    qDebug() << "  Ziel:" << dst;
     
     if (src.isEmpty() || dst.isEmpty()) {
         qDebug() << "  Validation failed: Empty source or destination";
@@ -81,7 +81,7 @@ void MainWindow::updateBackupSummary() {
     QString src = getSelectedSourcePath();
     QString dst = getSelectedDestPath();
     // Update the new summary label at the bottom
-    ui->backupPathSummaryLabel->setText("Source: " + src + "\nDestination: " + dst);
+    ui->backupPathSummaryLabel->setText("Quelle: " + src + "\nDestination: " + dst);
     
     bool isValid = validateBackupSelection();
     if (!isValid) {

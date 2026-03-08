@@ -51,7 +51,7 @@ void MainWindow::on_createIsoButton_clicked()
     "• Take several minutes to complete\n\n"
     "Do you want to continue?").arg(isoName, outputDir);
 
-    QMessageBox::StandardButton reply = QMessageBox::question(this, "Confirm ISO Creation",
+    QMessageBox::StandardButton reply = QMessageBox::question(this, "ISO-Erstellung bestätigen",
                                                               message,
                                                               QMessageBox::Yes | QMessageBox::No);
     if (reply != QMessageBox::Yes) {
@@ -60,8 +60,8 @@ void MainWindow::on_createIsoButton_clicked()
 
     // Get sudo password once
     bool ok;
-    QString sudoPassword = QInputDialog::getText(this, "Sudo Password",
-                                                 "Enter your sudo password:",
+    QString sudoPassword = QInputDialog::getText(this, "Sudo Passwort",
+                                                 "Sudo Passwort eingeben:",
                                                  QLineEdit::Password, "", &ok);
     if (!ok || sudoPassword.isEmpty()) {
         ui->createIsoButton->setEnabled(true);
@@ -71,7 +71,7 @@ void MainWindow::on_createIsoButton_clicked()
     // Disable button and show progress
     ui->createIsoButton->setEnabled(false);
     ui->isoProgressBar->setValue(0);
-    ui->isoStatusLabel->setPlainText("Starting system clone ISO creation...\n");
+    ui->isoStatusLabel->setPlainText("Erstellung der Systemklon-ISO-Datei starten...\n");
 
     // Check if offline mode is selected and package is available
     bool offlineMode = ui->offlineModeRadio->isChecked();
@@ -101,7 +101,7 @@ void MainWindow::on_createIsoButton_clicked()
     env.insert("SUDO_ASKPASS", "/bin/echo");
 
     connect(process, &QProcess::started, [this]() {
-        ui->isoStatusLabel->setPlainText("🚀 Starting system clone ISO creation...\n");
+        ui->isoStatusLabel->setPlainText("🚀 Starten der ISO-Datei für den Systemklon...\n");
     });
 
     connect(process, &QProcess::readyReadStandardOutput, [this, process]() {
@@ -181,7 +181,7 @@ void MainWindow::on_createIsoButton_clicked()
                                              "und kann zur Installation auf anderen Maschinen verwendet werden.");
                 } else {
                     ui->isoProgressBar->setValue(0);
-                    ui->isoStatusLabel->setPlainText(ui->isoStatusLabel->toPlainText() + "\n❌ ISO creation failed. Check the output above for details.");
+                    ui->isoStatusLabel->setPlainText(ui->isoStatusLabel->toPlainText() + "\n❌ ISO-Erstellung fehlgeschlagen. Weitere Details findest du in der obigen Ausgabe.");
                     QMessageBox::critical(this, "Fehler",
                                           "ISO-Datei konnte nicht erstellt werden. Weitere Details findest du in der obigen Ausgabe.\n\n"
                                           "Exit code: " + QString::number(exitCode));

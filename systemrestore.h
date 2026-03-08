@@ -199,13 +199,13 @@ bool MainWindow::validateRestoreSelection() {
 void MainWindow::updateRestoreSummary() {
     QString src = getSelectedRestoreSourcePath();
     QString dst = getSelectedRestoreDestPath();
-    ui->restorePathSummaryLabel->setText("Source: " + src + "\nDestination: " + dst);
+    ui->restorePathSummaryLabel->setText("Quelle: " + src + "\nZiel: " + dst);
     if (!validateRestoreSelection()) {
-        ui->restoreSummaryLabel->setText("Please select valid source and destination (must be different drives, not /mnt or /media, and not subfolders of each other).");
+        ui->restoreSummaryLabel->setText("Eine gültige Quelle und ein gültiges Ziel auswählen (es müssen unterschiedliche Laufwerke sein, nicht /mnt oder /media und keine Unterordner voneinander).");
         ui->startRestoreButton->setEnabled(false);
         return;
     }
-    ui->restoreSummaryLabel->setText("Restore from: " + src + "\nTo: " + dst);
+    ui->restoreSummaryLabel->setText("Wiederherstellen von: " + src + "\nNach: " + dst);
     ui->startRestoreButton->setEnabled(true);
 }
 

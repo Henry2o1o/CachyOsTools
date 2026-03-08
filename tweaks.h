@@ -583,7 +583,7 @@ void MainWindow::checkZramState() {
     proc.start("systemctl", QStringList() << "is-active" << "systemd-zram-setup@zram0.service");
     proc.waitForFinished();
     bool enabled = (proc.exitCode() == 0);
-    updateTweakStatusLabel(ui->zramStatusLabel, enabled ? "Enabled" : "Disabled", enabled);
+    updateTweakStatusLabel(ui->zramStatusLabel, enabled ? "Aktiviert" : "Disabled", enabled);
 }
 
 void MainWindow::checkCpuGovernorState() {
@@ -601,7 +601,7 @@ void MainWindow::checkIpv6State() {
     proc.waitForFinished();
     QString disabled = QString::fromUtf8(proc.readAllStandardOutput()).trimmed();
     bool enabled = (disabled != "1");
-    updateTweakStatusLabel(ui->ipv6StatusLabel, enabled ? "Enabled" : "Disabled", enabled);
+    updateTweakStatusLabel(ui->ipv6StatusLabel, enabled ? "Aktiviert" : "Disabled", enabled);
 }
 
 void MainWindow::checkTrimState() {
@@ -609,7 +609,7 @@ void MainWindow::checkTrimState() {
     proc.start("systemctl", QStringList() << "is-enabled" << "fstrim.timer");
     proc.waitForFinished();
     bool enabled = (proc.exitCode() == 0);
-    updateTweakStatusLabel(ui->trimStatusLabel, enabled ? "Enabled" : "Disabled", enabled);
+    updateTweakStatusLabel(ui->trimStatusLabel, enabled ? "Aktiviert" : "Disabled", enabled);
 }
 
 void MainWindow::checkTmpfsState() {
@@ -618,7 +618,7 @@ void MainWindow::checkTmpfsState() {
     proc.waitForFinished();
     QString fsType = QString::fromUtf8(proc.readAllStandardOutput()).trimmed();
     bool enabled = (fsType == "tmpfs");
-    updateTweakStatusLabel(ui->tmpfsStatusLabel, enabled ? "Enabled" : "Disabled", enabled);
+    updateTweakStatusLabel(ui->tmpfsStatusLabel, enabled ? "Aktiviert" : "Disabled", enabled);
 }
 
 void MainWindow::checkDnsState() {
@@ -635,7 +635,7 @@ void MainWindow::checkDnsState() {
         }
         resolv.close();
     }
-    updateTweakStatusLabel(ui->dnsStatusLabel, hasNameservers ? "Configured" : "Auto", hasNameservers);
+    updateTweakStatusLabel(ui->dnsStatusLabel, hasNameservers ? "Konfiguriert" : "Auto", hasNameservers);
 }
 
 void MainWindow::checkShowHiddenFilesState() {
@@ -644,7 +644,7 @@ void MainWindow::checkShowHiddenFilesState() {
     settings.beginGroup("General");
     bool enabled = settings.value("ShowHiddenFiles", false).toBool();
     settings.endGroup();
-    updateTweakStatusLabel(ui->showHiddenFilesStatusLabel, enabled ? "Enabled" : "Disabled", enabled);
+    updateTweakStatusLabel(ui->showHiddenFilesStatusLabel, enabled ? "Aktiviert" : "Disabled", enabled);
 }
 
 void MainWindow::checkMitigationsState() {
@@ -652,7 +652,7 @@ void MainWindow::checkMitigationsState() {
     proc.start("grep", QStringList() << "-q" << "mitigations=off" << "/etc/default/grub");
     proc.waitForFinished();
     bool disabled = (proc.exitCode() == 0);
-    updateTweakStatusLabel(ui->mitigationsStatusLabel, disabled ? "Disabled" : "Enabled", !disabled);
+    updateTweakStatusLabel(ui->mitigationsStatusLabel, disabled ? "Disabled" : "aktiviert", !disabled);
 }
 
 void MainWindow::checkPtraceState() {
@@ -721,10 +721,10 @@ void MainWindow::checkPerformanceHacksState() {
     }
     
     bool enabled = plocateInstalled && updatedbConfigured && plymouthRemoved;
-    QString status = "Partial";
-    if (enabled) status = "Enabled";
+    QString status = "Teilweise";
+    if (enabled) status = "Aktiviert";
     else if (!plocateInstalled && !updatedbConfigured && !plymouthRemoved) status = "Disabled";
-    else status = "Partial";
+    else status = "Teilweise";
     
     updateTweakStatusLabel(ui->performanceHacksStatusLabel, status, enabled);
 }
@@ -1171,7 +1171,7 @@ void MainWindow::checkThpState() {
     proc.waitForFinished();
     QString thp = QString::fromUtf8(proc.readAllStandardOutput()).trimmed();
     bool enabled = thp.contains("[madvise]") || thp.contains("[always]");
-    QString status = "Disabled";
+    QString status = "Deaktiviert";
     if (thp.contains("[madvise]")) status = "Madvise";
     else if (thp.contains("[always]")) status = "Always";
     else if (thp.contains("[never]")) status = "Never";
@@ -1250,7 +1250,7 @@ void MainWindow::on_tcpOptimizationsConfigButton_clicked() {
 void MainWindow::checkTcpOptimizationsState() {
     QFile config("/etc/sysctl.d/99-tcp-optimizations.conf");
     bool configured = config.exists();
-    updateTweakStatusLabel(ui->tcpOptimizationsStatusLabel, configured ? "Configured" : "Not Set", configured);
+    updateTweakStatusLabel(ui->tcpOptimizationsStatusLabel, configured ? "Konfiguriert" : "Nicht festgelegt", configured);
 }
 
 void MainWindow::on_tcpOptimizationsApplyButton_clicked() {
@@ -1426,10 +1426,10 @@ void MainWindow::checkPacmanOptimizationsState() {
     }
     
     bool optimized = hasParallel && hasColor;
-    QString status = "Partial";
+    QString status = "Teilweise";
     if (optimized && hasCandy) status = "Optimized";
-    else if (optimized) status = "Partial";
-    else status = "Default";
+    else if (optimized) status = "Teilweise";
+    else status = "Standard";
     
     updateTweakStatusLabel(ui->pacmanOptimizationsStatusLabel, status, optimized);
 }
@@ -1490,7 +1490,7 @@ void MainWindow::checkJournaldState() {
         journald.close();
         configured = content.contains("SystemMaxUse") || content.contains("SystemKeepFree");
     }
-    updateTweakStatusLabel(ui->journaldStatusLabel, configured ? "Configured" : "Default", configured);
+    updateTweakStatusLabel(ui->journaldStatusLabel, configured ? "Konfiguriert" : "Default", configured);
 }
 
 void MainWindow::on_journaldApplyButton_clicked() {

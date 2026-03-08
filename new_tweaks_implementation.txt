@@ -217,7 +217,7 @@ void MainWindow::checkThpState() {
     proc.waitForFinished();
     QString thp = QString::fromUtf8(proc.readAllStandardOutput()).trimmed();
     bool enabled = thp.contains("[madvise]") || thp.contains("[always]");
-    QString status = "Disabled";
+    QString status = "Deaktiviert";
     if (thp.contains("[madvise]")) status = "Madvise";
     else if (thp.contains("[always]")) status = "Always";
     else if (thp.contains("[never]")) status = "Never";
@@ -300,7 +300,7 @@ void MainWindow::on_tcpOptimizationsBackupButton_clicked() {
 void MainWindow::checkTcpOptimizationsState() {
     QFile config("/etc/sysctl.d/99-tcp-optimizations.conf");
     bool configured = config.exists();
-    updateTweakStatusLabel(ui->tcpOptimizationsStatusLabel, configured ? "Configured" : "Not Set", configured);
+    updateTweakStatusLabel(ui->tcpOptimizationsStatusLabel, configured ? "Konfiguriert" : "Nicht festgelegt", configured);
 }
 
 void MainWindow::on_tcpOptimizationsApplyButton_clicked() {
@@ -388,15 +388,15 @@ void MainWindow::checkFirewallState() {
         proc.waitForFinished();
         bool ufwActive = (proc.exitCode() == 0);
         if (ufwActive) {
-            updateTweakStatusLabel(ui->firewallStatusLabel, "UFW Active", true);
+            updateTweakStatusLabel(ui->firewallStatusLabel, "UFW Aktiv", true);
             return;
         }
     } else {
-        updateTweakStatusLabel(ui->firewallStatusLabel, "Firewalld Active", true);
+        updateTweakStatusLabel(ui->firewallStatusLabel, "Firewalld Ativ", true);
         return;
     }
     
-    updateTweakStatusLabel(ui->firewallStatusLabel, "Disabled", false);
+    updateTweakStatusLabel(ui->firewallStatusLabel, "Deaktiviert", false);
 }
 
 void MainWindow::on_firewallApplyButton_clicked() {
@@ -488,9 +488,9 @@ void MainWindow::checkPacmanOptimizationsState() {
     }
     
     bool optimized = hasParallel && hasColor;
-    QString status = "Partial";
+    QString status = "Teilweise";
     if (optimized && hasCandy) status = "Optimized";
-    else if (optimized) status = "Partial";
+    else if (optimized) status = "Teilweise";
     else status = "Default";
     
     updateTweakStatusLabel(ui->pacmanOptimizationsStatusLabel, status, optimized);

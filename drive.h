@@ -67,7 +67,7 @@ void MainWindow::on_mountButton_clicked()
 {
     QString selectedDrive = getSelectedDrive();
     if (selectedDrive.isEmpty()) {
-        QMessageBox::warning(this, "No Drive Selected", "Please select a drive to mount.");
+        QMessageBox::warning(this, "Kein Laufwerk ausgewählt", "Laufwerk zum Einbinden auswählen.");
         return;
     }
     logMessage("📁 Mounting " + selectedDrive);
@@ -79,7 +79,7 @@ void MainWindow::on_forceMountButton_clicked()
 {
     QString selectedDrive = getSelectedDrive();
     if (selectedDrive.isEmpty()) {
-        QMessageBox::warning(this, "No Drive Selected", "Please select a drive to mount.");
+        QMessageBox::warning(this, "Kein Laufwerk ausgewählt", "Laufwerk zum Einbinden auswählen.");
         return;
     }
     logMessage("⚡ Force mounting " + selectedDrive);
@@ -91,7 +91,7 @@ void MainWindow::on_unmountButton_clicked()
 {
     QString selectedDrive = getSelectedDrive();
     if (selectedDrive.isEmpty()) {
-        QMessageBox::warning(this, "No Drive Selected", "Please select a drive to unmount.");
+        QMessageBox::warning(this, "Kein Laufwerk ausgewählt", "Laufwerk zum Aushängen auswählen.");
         return;
     }
     logMessage("📤 Unmounting " + selectedDrive);

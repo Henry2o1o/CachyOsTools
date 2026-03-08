@@ -144,7 +144,7 @@ select_build_config() {
                 break
                 ;;
             *)
-                print_error "Invalid choice. Please select 1-4."
+                print_error "Ungültige Auswahl. Bitte wählen Sie 1-4."
                 ;;
         esac
     done
@@ -173,7 +173,7 @@ select_build_config() {
                 break
                 ;;
             *)
-                print_error "Invalid choice. Please select 1-2."
+                print_error "Ungültige Auswahl. Bitte wählen Sie 1-2."
                 ;;
         esac
     done
@@ -241,7 +241,7 @@ check_dependencies() {
 
 
 check_runtime_dependencies() {
-    print_status "Checking runtime dependencies for ISO creation feature..."
+    print_status "Überprüfung der Laufzeitabhängigkeiten für die ISO-Erstellungsfunktion..."
     
     local missing_runtime_deps=()
     local optional_missing=()
@@ -271,9 +271,9 @@ check_runtime_dependencies() {
     
     if [ ${#missing_runtime_deps[@]} -gt 0 ]; then
         echo ""
-        echo -e "${BRIGHT_RED}${BOLD}════════════════════════════════════════════════════════════════${NC}"
-        echo -e "${BRIGHT_RED}${BOLD}  ⚠️  MISSING REQUIRED PACKAGES FOR ISO CREATION FEATURE  ⚠️${NC}"
-        echo -e "${BRIGHT_RED}${BOLD}════════════════════════════════════════════════════════════════${NC}"
+        echo -e "${BRIGHT_RED}${BOLD}═══════════════════════════════════════════════════════════════════════${NC}"
+        echo -e "${BRIGHT_RED}${BOLD}  ⚠️  FEHLENDE ERFORDERLICHE PAKETE FÜR DIE ISO-ERSTELLUNGSFUNKTION  ⚠️${NC}"
+        echo -e "${BRIGHT_RED}${BOLD}═══════════════════════════════════════════════════════════════════════${NC}"
         echo ""
         echo -e "${BRIGHT_RED}${BOLD}Missing packages:${NC} ${BRIGHT_YELLOW}${BOLD}${missing_runtime_deps[*]}${NC}"
         echo ""
@@ -290,16 +290,16 @@ check_runtime_dependencies() {
         echo -e "${BRIGHT_GREEN}${BOLD}Fedora:${NC}"
         echo -e "${BRIGHT_YELLOW}${BOLD}  sudo dnf install ${missing_runtime_deps[*]}${NC}"
         echo ""
-        echo -e "${BRIGHT_RED}${BOLD}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-        echo -e "${BRIGHT_RED}${BOLD}  ⛔ WARNING: ISO creation feature will NOT work without these!${NC}"
-        echo -e "${BRIGHT_RED}${BOLD}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+        echo -e "${BRIGHT_RED}${BOLD}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+        echo -e "${BRIGHT_RED}${BOLD}  ⛔ WARNUNG: ISO-Erstellungsfunktion funktioniert ohne diese Dateien NICHT!${NC}"
+        echo -e "${BRIGHT_RED}${BOLD}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
         echo ""
     else
-        print_success "All required runtime dependencies found!"
+        print_success "Alle erforderlichen Laufzeitabhängigkeiten gefunden!"
     fi
     
     if [ ${#optional_missing[@]} -gt 0 ]; then
-        echo -e "${CYAN}[INFO]${NC} Optional dependency missing: ${YELLOW}${optional_missing[*]}${NC} (only needed for browsing ISO output folder)"
+        echo -e "${CYAN}[INFO]${NC} Optionale Abhängigkeit fehlt: ${YELLOW}${optional_missing[*]}${NC} (Wird nur zum Durchsuchen des ISO-Ausgabeordners benötigt)"
     fi
     
     echo ""
@@ -313,7 +313,7 @@ print_status "Building CachyOsTools from: $SCRIPT_DIR"
 
 # Check if we're in the project root
 if [ ! -f "CMakeLists.txt" ]; then
-    print_error "CMakeLists.txt not found. Please run this script from the project root directory."
+    print_error "Datei CMakeLists.txt nicht gefunden. Dieses Skript im Projektstammverzeichnis ausführen."
     exit 1
 fi
 
