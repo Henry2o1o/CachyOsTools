@@ -354,7 +354,7 @@ QString MainWindow::createIsoScript(const QString &isoName, const QString &outpu
     out << "# regenerate on target\n";
     out << "run_sudo rm -f \"$SNAPDIR/etc/machine-id\" \"$SNAPDIR/etc/fstab\" \"$SNAPDIR/var/lib/systemd/random-seed\" || true\n\n";
 
-    out << "echo \"[*] Packing snapshot to $SNAP_TAR (zstd -19)…\"\n";
+    out << "echo \"[*] Snapshot packen nach $SNAP_TAR (zstd -19)…\"\n";
     out << "run_sudo tar --xattrs --acls --numeric-owner -C \"$SNAPDIR\" -I 'zstd -19 -T0' -cpf \"$SNAP_TAR\" .\n";
     out << "run_sudo chown \"$USER:$USER\" \"$SNAP_TAR\"\n";
     out << "echo \"[*] Snapshot komprimiert. Verfügbarer Speicherplatz:\"\n";
